@@ -1,0 +1,147 @@
+import {
+  faLaptop,
+  faWandMagicSparkles,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { MapPin } from 'lucide-react';
+import { motion } from 'motion/react';
+import React from 'react';
+
+import profilePic from '@/assets/Logo/logo.png';
+import { personalDetails, socialItems, techStack } from '@/data/myInfo';
+import { transitions } from '@/utils/transitions';
+
+import HoverButton from '../common/HoverButton';
+import { Separator } from '../ui';
+
+const Profile = () => {
+  return (
+    <section id='profile' className='scroll-mt-nav'>
+      <div id='profile-wrapper' className='relative'>
+        {/* <motion.div
+          layout
+          id='profile-banner-wrapper'
+          className='h-30 relative overflow-hidden md:h-44'
+          initial={{ ...transitions.fadeUp.initial, filter: 'blur(10px)' }}
+          animate={{ ...transitions.fadeUp.animate, filter: 'blur(0px)' }}
+          transition={{
+            type: 'tween',
+            duration: 1.2,
+            ease: 'easeInOut',
+          }}
+        >
+          <Dither
+            // className="h-48"
+            waveColor={[0.5, 0.5, 0.5]}
+            disableAnimation={false}
+            enableMouseInteraction={true}
+            mouseRadius={0.3}
+            colorNum={4}
+            waveAmplitude={0.3}
+            waveFrequency={3}
+            waveSpeed={0.05}
+          />
+
+          <BottomFadeOverlay />
+        </motion.div> */}
+
+        <motion.div
+          initial={transitions.fadeUp.initial}
+          // animate={isLoading ? {} : transitions.fadeUp.animate}
+          animate={transitions.fadeUp.animate}
+          transition={{ ...transitions.fadeUp.transition, delay: 0.4 }}
+        >
+          <div
+            id='profile-content-wrapper'
+            className='relative mt-[-5%] flex flex-col gap-6 p-2'
+          >
+            <div
+              id='profile-content-header'
+              className='flex flex-col items-center gap-2 md:flex-row md:gap-6'
+            >
+              <img
+                src={profilePic}
+                alt='Profile Picture'
+                className='w-23 h-23 rounded-3xl object-cover'
+              />
+              <div className='flex w-full flex-col items-center gap-2 self-center p-2 md:items-start'>
+                {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
+              <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
+            </div> */}
+                <div className='xs-max:flex-row flex flex-col items-center gap-1'>
+                  <span className='text-responsive-8 font-extrabold'>
+                    {personalDetails.name}
+                  </span>
+
+                  <Separator
+                    orientation='vertical'
+                    className='xs-max:block hidden h-8 bg-white'
+                  />
+
+                  <span className='text-responsive-5 font-vt323 font-medium'>
+                    {personalDetails.position}
+                  </span>
+                </div>
+                {/* <span className="font-light text-sm">
+                Open to New Opportunities
+              </span> */}
+                <div className='text-responsive-3 flex items-center gap-1 font-light md:mb-4'>
+                  <MapPin className='w-4.5 h-4.5' />
+                  <p>{personalDetails.location}</p>
+                </div>
+                <div className='flex w-full justify-center gap-2 md:justify-end'>
+                  <div className='flex gap-2'>
+                    {socialItems.map((item) => (
+                      <HoverButton
+                        key={item.name}
+                        size='icon'
+                        variant='outline'
+                        onClick={() => window.open(item.url, '_blank')}
+                      >
+                        <FontAwesomeIcon icon={item.icon} />
+                      </HoverButton>
+                    ))}
+                  </div>
+                  <Separator orientation='vertical' className='h-auto' />
+                  {/* <HoverButton onClick={handleDownloadResume}>
+                    Resume <Download />
+                  </HoverButton> */}
+                </div>
+              </div>
+            </div>
+            <div
+              id='profile-content-desc'
+              className='text-responsive-3.5 text-center font-light text-gray-300 md:text-left'
+            >
+              <span>
+                {personalDetails.description}
+
+                <FontAwesomeIcon
+                  className='ml-1 inline h-5 w-5'
+                  icon={faWandMagicSparkles}
+                />
+                <FontAwesomeIcon
+                  className='ml-1 inline h-5 w-5'
+                  icon={faLaptop}
+                />
+              </span>
+            </div>
+            <div className='font-vt323 text-responsive-4 bg-midnight-blue/30 rounded-lg border px-4 py-2 backdrop-blur-md'>
+              Technologies I've recently worked with:
+              <ul className='text-responsive-3.5 grid auto-cols-auto grid-flow-col grid-rows-3 gap-1'>
+                {techStack.map(({ id, label, icon: Icon }) => (
+                  <li key={id} className='flex items-center gap-2'>
+                    <Icon className='h-4 w-4' />
+                    {label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Profile;
