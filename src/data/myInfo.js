@@ -1,6 +1,7 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Briefcase, Database, Flag, FolderOpen, User } from 'lucide-react';
 
+import GitlabIcon from '@/assets/icons/Gitlab';
 import JavascriptIcon from '@/assets/icons/JavascriptIcon';
 import MaterialUiIcon from '@/assets/icons/MaterialUiIcon';
 import MotionJsIcon from '@/assets/icons/MotionIcon';
@@ -10,7 +11,6 @@ import ReduxIcon from '@/assets/icons/reduxIcon';
 import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
-import GitlabIcon from '@/assets/icons/Gitlab';
 
 // Personal
 export const personalDetails = {
@@ -34,15 +34,14 @@ export const techStack = [
   { id: 'shadcn', label: 'Shadcn UI', icon: ShadcnUiIcon },
   { id: 'fontawesome', label: 'Font Awesome', icon: Flag },
   { id: 'redux', label: 'Redux', icon: ReduxIcon },
-  { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
-
   { id: 'vite', label: 'Vite.js', icon: ViteJsIcon },
-  { id: 'mysql', label: 'SQL', icon: Database },
+  { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
+  // { id: 'mysql', label: 'SQL', icon: Database },
 ];
 
 // Layout
 export const navItems = [
-  { name: 'About', href: '/profile', icon: User },
+  { name: 'Profile', href: '/profile', icon: User },
   { name: 'Experience', href: '/experience', icon: Briefcase },
   { name: 'Projects', href: '/projects', icon: FolderOpen },
 ];
