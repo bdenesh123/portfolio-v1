@@ -59,7 +59,7 @@ const Navbar = () => {
               href='#'
               className='text-responsive-4.5 font-press-start-2p flex items-center gap-2 font-bold'
             >
-              <img src={logo} alt='Logo' className='h-12 w-auto' />
+              <img src={logo} alt='Logo' className='h-11 w-auto' />
 
               {/* <span className='hidden md:inline'>{personalDetails.name}</span> */}
               {/* <span className='md:hidden'>{personalDetails.initials}</span> */}
