@@ -11,6 +11,9 @@ import ReduxIcon from '@/assets/icons/reduxIcon';
 import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
+import dummyImage from '@/assets/images/carpic.jpg';
+
+const currentUrl = window.location.href;
 
 // Tech Stack
 export const techStack = [
@@ -112,6 +115,25 @@ export const personalDetails = {
     },
   ],
 };
+
+// Projects
+
+export const projectDetails = [
+  {
+    id: 'portfolio.v1',
+    name: 'portfolio.v1',
+    repoUrl: 'https://github.com/bryansimyf/bryansim-portfolio-v2',
+    url: currentUrl,
+    image: dummyImage,
+    description:
+      'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
+    techStack: [
+      { id: 'react', label: 'React', icon: ReactIcon },
+      { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
+      { id: 'python', label: 'Python', icon: PythonIcon },
+    ],
+  },
+];
 
 // Layout
 export const navItems = [
