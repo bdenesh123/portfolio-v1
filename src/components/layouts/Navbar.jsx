@@ -2,7 +2,7 @@ import { Menu } from 'lucide-react';
 import { motion } from 'motion/react';
 import React from 'react';
 
-// import logo from '@/assets/logo/logo2.png';
+import logo from '@/assets/images/logo2.png';
 import { navItems, personalDetails } from '@/data/myInfo';
 import { getInitials } from '@/utils/initials';
 import { transitions } from '@/utils/transitions';
@@ -59,7 +59,7 @@ const Navbar = () => {
               href='#'
               className='text-responsive-4.5 font-press-start-2p flex items-center gap-2 font-bold'
             >
-              {/* <img src={logo} alt='Logo' className='h-11 w-auto' /> */}
+              <img src={logo} alt='Logo' className='h-11 w-auto' />
 
               {/* <span className='hidden md:inline'>{personalDetails.name}</span> */}
               {/* <span className='md:hidden'>{personalDetails.initials}</span> */}
