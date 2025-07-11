@@ -1,4 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import dayjs from 'dayjs';
 import { Briefcase, Database, Flag, FolderOpen, User } from 'lucide-react';
 
 import GitlabIcon from '@/assets/icons/Gitlab';
@@ -155,3 +156,9 @@ export const socialItems = [
     url: 'https://www.linkedin.com/in/deneshwaran/',
   },
 ];
+
+// App
+export const appInfo = {
+  version: `v${import.meta.env.VITE_APP_VERSION}`,
+  lastUpdated: dayjs('2025-06-04').format('DD MMMM YYYY'),
+};

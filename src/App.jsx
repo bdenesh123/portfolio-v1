@@ -1,3 +1,4 @@
+import Footer from './components/layouts/Footer';
 import Navbar from './components/layouts/Navbar';
 import Experience from './components/sections/Experience';
 import Profile from './components/sections/Profile';
@@ -12,6 +13,7 @@ const App = () => {
           <Profile />
           <Experience />
           <Projects />
+          <Footer />
         </div>
       </div>
     </>
