@@ -62,7 +62,7 @@ const Profile = () => {
               <img
                 src={profilePic}
                 alt='Profile Picture'
-                className='w-23 h-23 rounded-3xl object-cover'
+                className='h-15 w-15 rounded-3xl object-cover'
               />
               <div className='flex w-full flex-col items-center gap-2 self-center p-2 md:items-start'>
                 {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
