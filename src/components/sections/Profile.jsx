@@ -71,7 +71,7 @@ const Profile = () => {
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
                 <div className='xs-max:flex-row flex  items-center gap-1'>
-                  <span className='font-press-start-2p text-[1.8rem] font-extrabold'>
+                  <span className='font-press-start-2p text-[1.4rem] font-extrabold'>
                     {personalDetails.name}
                   </span>
 
