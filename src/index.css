@@ -1,80 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Theme - Fonts */
+    --font-audiowide: 'Audiowide', sans-serif;
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-vt323: 'VT323', monospace;
+    --font-press-start-2p: 'Press Start 2P', cursive;
+
+    --font-poppins: 'Poppins', sans-serif;
+    --font-jet-brains: 'JetBrains', monospace;
+    --font-share-tech-mono: 'Share Tech Mono', monospace;
+
+    /* Theme - Custom Viewport */
+    --breakpoint-xs-max: 416px;
+
+    /* Theme - Custom Colors */
+    --color-charcoal-gray: #121212;
+    --color-midnight-blue: #212121;
+    --color-rich-black: #0a0a0a;
+    --color-iridium: #181818;
+
+    --background: 0, 0%, 100%;
+    --foreground: 20, 14.3%, 4.1%;
+
+    --card: 0, 0%, 95%;
+    --card-foreground: 20, 14.3%, 4.1%;
+
+    --popover: 0, 0%, 100%;
+    --popover-foreground: 20, 14.3%, 4.1%;
+
+    --primary: 20, 14.3%, 4.1%;
+    --primary-darker: 20, 14.3%, 4.1%;
+    --primary-foreground: 60, 9.1%, 97.8%;
+
+    --secondary: 0, 0%, 85%;
+    --secondary-foreground: 24, 9.8%, 10%;
+
+    --muted: 0, 0%, 85%;
+    --muted-foreground: 25, 5.3%, 44.7%;
+
+    --accent: 0, 0%, 85%;
+    --accent-foreground: 24, 9.8%, 10%;
+
+    --destructive: 0, 84.2%, 60.2%;
+    --destructive-foreground: 60, 9.1%, 97.8%;
+
+    --border: 20, 5.9%, 90%;
+    --input: 20, 5.9%, 90%;
+    --ring: 20, 14.3%, 4.1%;
+    --star: 39, 89%, 67%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0, 0%, 4%;
+    --foreground: 60, 9.1%, 97.8%;
+
+    --card: 0, 0%, 15%;
+    --card-foreground: 60, 9.1%, 97.8%;
+
+    --popover: 20, 14.3%, 4.1%;
+    --popover-foreground: 60, 9.1%, 97.8%;
+
+    --primary: 53, 81%, 90%;
+    --primary-darker: 31, 32%, 48%;
+    --primary-foreground: 20, 14.3%, 4.1%;
+
+    --secondary: 0, 0%, 20%;
+    --secondary-foreground: 60, 9.1%, 97.8%;
+
+    --muted: 0, 0%, 15%;
+    --muted-foreground: 24, 5.4%, 63.9%;
+
+    --accent: 0, 0%, 15%;
+    --accent-foreground: 60, 9.1%, 97.8%;
+
+    --destructive: 0, 62.8%, 30.6%;
+    --destructive-foreground: 60, 9.1%, 97.8%;
+
+    --border: 0, 0%, 20%;
+    --input: 0, 0%, 20%;
+    --ring: 35.5, 91.7%, 32.9%;
+    --star: 39, 89%, 67%;
+  }
+
   @layer base {
-    :root {
-      --background: 0, 0%, 100%;
-      --foreground: 20, 14.3%, 4.1%;
-
-      --card: 0, 0%, 95%;
-      --card-foreground: 20, 14.3%, 4.1%;
-
-      --popover: 0, 0%, 100%;
-      --popover-foreground: 20, 14.3%, 4.1%;
-
-      --primary: 20, 14.3%, 4.1%;
-      --primary-darker: 20, 14.3%, 4.1%;
-      --primary-foreground: 60, 9.1%, 97.8%;
-
-      --secondary: 0, 0%, 85%;
-      --secondary-foreground: 24, 9.8%, 10%;
-
-      --muted: 0, 0%, 85%;
-      --muted-foreground: 25, 5.3%, 44.7%;
-
-      --accent: 0, 0%, 85%;
-      --accent-foreground: 24, 9.8%, 10%;
-
-      --destructive: 0, 84.2%, 60.2%;
-      --destructive-foreground: 60, 9.1%, 97.8%;
-
-      --border: 20, 5.9%, 90%;
-      --input: 20, 5.9%, 90%;
-      --ring: 20, 14.3%, 4.1%;
-      --star: 39, 89%, 67%;
-
-      --radius: 0.5rem;
+    body {
+      font-family: var(--font-poppins); /* or whichever font you prefer */
     }
 
-    .dark {
-      --background: 0, 0%, 10%;
-      --foreground: 60, 9.1%, 97.8%;
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-orbitron);
+    }
 
-      --card: 0, 0%, 15%;
-      --card-foreground: 60, 9.1%, 97.8%;
+    code,
+    pre {
+      font-family: var(--font-share-tech-mono);
+    }
 
-      --popover: 20, 14.3%, 4.1%;
-      --popover-foreground: 60, 9.1%, 97.8%;
+    .font-vt323 {
+      font-family: var(--font-vt323);
+    }
 
-      --primary: 53, 81%, 90%;
-      --primary-darker: 31, 32%, 48%;
-      --primary-foreground: 20, 14.3%, 4.1%;
+    .font-audiowide {
+      font-family: var(--font-audiowide);
+    }
 
-      --secondary: 0, 0%, 20%;
-      --secondary-foreground: 60, 9.1%, 97.8%;
+    .font-press-start-2p {
+      font-family: var(--font-press-start-2p);
+    }
 
-      --muted: 0, 0%, 15%;
-      --muted-foreground: 24, 5.4%, 63.9%;
-
-      --accent: 0, 0%, 15%;
-      --accent-foreground: 60, 9.1%, 97.8%;
-
-      --destructive: 0, 62.8%, 30.6%;
-      --destructive-foreground: 60, 9.1%, 97.8%;
-
-      --border: 0, 0%, 20%;
-      --input: 0, 0%, 20%;
-      --ring: 35.5, 91.7%, 32.9%;
-      --star: 39, 89%, 67%;
+    .font-jet-brains {
+      font-family: var(--font-jet-brains);
     }
   }
-}
 
-@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
   }
 
   h1 {
@@ -90,7 +155,15 @@
   }
 
   p {
-    @apply mb-4;
+    @apply mb-4 text-[hsl(var(--foreground))];
+  }
+
+  span {
+    @apply text-[hsl(var(--foreground))];
+  }
+
+  div {
+    @apply text-[hsl(var(--foreground))];
   }
 
   ol {
@@ -98,14 +171,68 @@
   }
 
   li {
-    @apply mb-2 list-inside list-disc;
-  }
-
-  p {
-    @apply mb-4;
+    @apply mb-2 list-inside list-disc  text-[hsl(var(--foreground))];
   }
 
   :not(pre) > code {
     @apply rounded bg-secondary px-1 font-normal text-secondary-foreground;
+  }
+}
+
+@layer utilities {
+  /* Custom responsive text utility */
+  [class^='text-responsive-'] {
+    --value: 1; /* default fallback */
+
+    --base-size: calc(var(--value) * 0.25rem);
+    --min-size: calc(var(--base-size) * 0.75);
+    --max-size: calc(var(--base-size) * 1.25);
+
+    --min-line-height: 1.2;
+    --preferred-line-height: 1.4;
+    --max-line-height: 1.6;
+
+    font-size: clamp(
+      var(--min-size),
+      calc(var(--base-size) + 0.5vw),
+      var(--max-size)
+    ) !important;
+
+    line-height: clamp(
+      var(--min-line-height),
+      calc(var(--preferred-line-height) + 0.1vw),
+      var(--max-line-height)
+    ) !important;
+  }
+
+  .text-responsive-1 {
+    --value: 1;
+  }
+  .text-responsive-1\.5 {
+    --value: 1.5;
+  }
+  .text-responsive-2 {
+    --value: 2;
+  }
+  .text-responsive-2\.5 {
+    --value: 2.5;
+  }
+  .text-responsive-3 {
+    --value: 3;
+  }
+  .text-responsive-3\.5 {
+    --value: 3.5;
+  }
+  .text-responsive-4 {
+    --value: 4;
+  }
+  .text-responsive-4\.5 {
+    --value: 4.5;
+  }
+  .text-responsive-3\.25 {
+    --value: 3.25;
+  }
+  .text-responsive-5 {
+    --value: 5;
   }
 }

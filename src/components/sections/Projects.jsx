@@ -1,4 +1,4 @@
-import { ExternalLink, FolderGit } from 'lucide-react';
+import { ExternalLink, FolderGit, Github, GithubIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -6,6 +6,9 @@ import { projectDetails } from '@/data/myInfo';
 import useResponsive from '@/hooks/useResponsive';
 
 import HoverButton from '../common/HoverButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const ProjectTab = (props) => {
   const { previewData } = props;
@@ -79,10 +82,21 @@ const ProjectTab = (props) => {
           </div>
           <div className='flex justify-end gap-2'>
             <HoverButton onClick={() => handleRedirect('github')}>
-              Source <FolderGit />
+              <div className='text-responsive-4 flex items-center justify-between gap-2'>
+                Source <FontAwesomeIcon icon={faGithub} className='h-4 w-4' />
+              </div>
             </HoverButton>
-            <HoverButton onClick={() => handleRedirect('project')}>
-              Link <ExternalLink />
+            <HoverButton
+              // variant="ghost"
+              onClick={() => handleRedirect('project')}
+            >
+              <div className='text-responsive-4 flex items-center justify-between gap-2'>
+                Link{' '}
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  className='h-3.5 w-3.5'
+                />
+              </div>
             </HoverButton>
           </div>
         </div>

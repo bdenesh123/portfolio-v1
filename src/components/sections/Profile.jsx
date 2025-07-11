@@ -7,18 +7,20 @@ import { MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 import React from 'react';
 
-import profilePic from '@/assets/Logo/logo.png';
+import profilePic from '@/assets/images/deadspace.jpg';
 import { personalDetails, socialItems, techStack } from '@/data/myInfo';
 import { transitions } from '@/utils/transitions';
 
+import BottomFadeOverlay from '../common/BottomFadeOverlay';
 import HoverButton from '../common/HoverButton';
 import { Separator } from '../ui';
+import Dither from '../ui/Dither';
 
 const Profile = () => {
   return (
     <section id='profile' className='scroll-mt-nav'>
       <div id='profile-wrapper' className='relative'>
-        {/* <motion.div
+        <motion.div
           layout
           id='profile-banner-wrapper'
           className='h-30 relative overflow-hidden md:h-44'
@@ -43,7 +45,7 @@ const Profile = () => {
           />
 
           <BottomFadeOverlay />
-        </motion.div> */}
+        </motion.div>
 
         <motion.div
           initial={transitions.fadeUp.initial}
@@ -62,20 +64,20 @@ const Profile = () => {
               <img
                 src={profilePic}
                 alt='Profile Picture'
-                className='h-15 w-15 rounded-3xl object-cover'
+                className='h-[90px] w-[80px]  rounded-3xl object-cover'
               />
               <div className='flex w-full flex-col items-center gap-2 self-center p-2 md:items-start'>
                 {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
-                <div className='xs-max:flex-row flex flex-col items-center gap-1'>
-                  <span className='text-responsive-8 font-extrabold'>
+                <div className='xs-max:flex-row flex  items-center gap-1'>
+                  <span className='text-[2.5rem] font-extrabold'>
                     {personalDetails.name}
                   </span>
 
                   <Separator
                     orientation='vertical'
-                    className='xs-max:block hidden h-8 bg-white'
+                    className='xs-max:block mx-1 h-8 bg-white'
                   />
 
                   <span className='text-responsive-5 font-vt323 font-medium'>
@@ -86,8 +88,8 @@ const Profile = () => {
                 Open to New Opportunities
               </span> */}
                 <div className='text-responsive-3 flex items-center gap-1 font-light md:mb-4'>
-                  <MapPin className='w-4.5 h-4.5' />
-                  <p>{personalDetails.location}</p>
+                  <MapPin className='h-[20px] w-[20px]' />
+                  <p className='mb-0'>{personalDetails.location}</p>
                 </div>
                 <div className='flex w-full justify-center gap-2 md:justify-end'>
                   <div className='flex gap-2'>
@@ -102,7 +104,7 @@ const Profile = () => {
                       </HoverButton>
                     ))}
                   </div>
-                  <Separator orientation='vertical' className='h-auto' />
+                  {/* <Separator orientation='vertical' className='h-auto' /> */}
                   {/* <HoverButton onClick={handleDownloadResume}>
                     Resume <Download />
                   </HoverButton> */}
@@ -126,12 +128,14 @@ const Profile = () => {
                 />
               </span>
             </div>
-            <div className='font-vt323 text-responsive-4 bg-midnight-blue/30 rounded-lg border px-4 py-2 backdrop-blur-md'>
-              Technologies I've recently worked with:
+            <div className='font-vt323 rounded-lg border px-4 py-2 backdrop-blur-md dark:bg-[color:rgba(33,33,33,0.3)]'>
+              <p className='text-responsive-4 mb-1 '>
+                Technologies I've recently worked with:
+              </p>
               <ul className='text-responsive-3.5 grid auto-cols-auto grid-flow-col grid-rows-3 gap-1'>
                 {techStack.map(({ id, label, icon: Icon }) => (
                   <li key={id} className='flex items-center gap-2'>
-                    <Icon className='h-4 w-4' />
+                    <Icon className='h-5 w-5' />
                     {label}
                   </li>
                 ))}

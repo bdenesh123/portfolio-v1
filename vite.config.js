@@ -9,6 +9,9 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   plugins: [react(), svgr()],
+  optimizeDeps: {
+    include: ['postprocessing'],
+  },
   assetsInclude: ['**/*.md'],
   resolve: {
     alias: {

@@ -46,7 +46,7 @@ const Experience = () => {
                   <div className='relative my-1.5'>
                     {/* Pulsing background effect */}
                     {isCurrent && (
-                      <div className='absolute -left-0.5 -top-0.5 h-5 w-5 animate-ping rounded-full bg-cyan-400 opacity-30'></div>
+                      <div className='absolute -left-0.5 -top-0.5 h-5 w-5 animate-ping rounded-full bg-cyan-400 opacity-30' />
                     )}
                     {/* Core dot */}
                     <div

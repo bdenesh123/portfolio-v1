@@ -1,14 +1,15 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import dayjs from 'dayjs';
-import { Briefcase, Database, Flag, FolderOpen, User } from 'lucide-react';
+import { Briefcase, Database, FolderOpen, User } from 'lucide-react';
 
+import FontAwesomeIcon from '@/assets/icons/FontAwesomeIcon';
 import GitlabIcon from '@/assets/icons/Gitlab';
 import JavascriptIcon from '@/assets/icons/JavascriptIcon';
 import MaterialUiIcon from '@/assets/icons/MaterialUiIcon';
 import MotionJsIcon from '@/assets/icons/MotionIcon';
 import PythonIcon from '@/assets/icons/PythonIcon';
 import ReactIcon from '@/assets/icons/ReactIcon';
-import ReduxIcon from '@/assets/icons/reduxIcon';
+import ReduxIcon from '@/assets/icons/ReduxIcon';
 import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
@@ -25,7 +26,7 @@ export const techStack = [
   { id: 'mui', label: 'MUI', icon: MaterialUiIcon },
   { id: 'motion', label: 'Motion', icon: MotionJsIcon },
   { id: 'shadcn', label: 'Shadcn UI', icon: ShadcnUiIcon },
-  { id: 'fontawesome', label: 'Font Awesome', icon: Flag },
+  { id: 'fontawesome', label: 'Font Awesome', icon: FontAwesomeIcon },
   { id: 'redux', label: 'Redux', icon: ReduxIcon },
   { id: 'vite', label: 'Vite.js', icon: ViteJsIcon },
   { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
@@ -138,9 +139,9 @@ export const projectDetails = [
 
 // Layout
 export const navItems = [
-  { name: 'Profile', href: '/profile', icon: User },
-  { name: 'Experience', href: '/experience', icon: Briefcase },
-  { name: 'Projects', href: '/projects', icon: FolderOpen },
+  { name: 'Profile', href: '#profile', icon: User },
+  { name: 'Experience', href: '#experience', icon: Briefcase },
+  { name: 'Projects', href: '#projects', icon: FolderOpen },
 ];
 
 // Socials

@@ -6,6 +6,7 @@ import { navItems, personalDetails } from '@/data/myInfo';
 import { getInitials } from '@/utils/initials';
 import { transitions } from '@/utils/transitions';
 
+import ThemeModeMenu from '../ThemeModeMenu';
 import {
   Button,
   DropdownMenu,
@@ -76,6 +77,7 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            {/* <ThemeModeMenu /> */}
           </div>
 
           {/* Mobile menu button - Hide on screens ≥768px */}
