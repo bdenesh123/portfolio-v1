@@ -1,13 +1,6 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import dayjs from 'dayjs';
-import {
-  Briefcase,
-  Database,
-  FolderOpen,
-  Laptop,
-  LaptopMinimal,
-  User,
-} from 'lucide-react';
+import { Briefcase, Laptop, User } from 'lucide-react';
 
 import FontAwesomeIcon from '@/assets/icons/FontAwesomeIcon';
 import GitlabIcon from '@/assets/icons/Gitlab';
