@@ -24,16 +24,12 @@ export const techStack = [
   { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
   { id: 'python', label: 'Python', icon: PythonIcon },
   { id: 'motion', label: 'Motion', icon: MotionJsIcon },
-
   { id: 'tailwind', label: 'Tailwind', icon: TailwindCssIcon },
   { id: 'mui', label: 'MUI', icon: MaterialUiIcon },
-
   { id: 'shadcn', label: 'Shadcn UI', icon: ShadcnUiIcon },
-  { id: 'fontawesome', label: 'Font Awesome', icon: FontAwesomeIcon },
-
+  // { id: 'fontawesome', label: 'Font Awesome', icon: FontAwesomeIcon },
   // { id: 'redux', label: 'Redux', icon: ReduxIcon },
-
-  { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
+  // { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
   { id: 'vite', label: 'Vite.js', icon: ViteJsIcon },
   { id: 'vercel', label: 'Vercel', icon: VercelIcon },
   // { id: 'mysql', label: 'SQL', icon: Database },
