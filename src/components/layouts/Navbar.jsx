@@ -2,7 +2,7 @@ import { Menu } from 'lucide-react';
 import { motion } from 'motion/react';
 import React from 'react';
 
-import logo from '@/assets/logo/logo2.png';
+import logo from '@/assets/images/logo2.png';
 import { navItems, personalDetails } from '@/data/myInfo';
 import { getInitials } from '@/utils/initials';
 import { transitions } from '@/utils/transitions';
