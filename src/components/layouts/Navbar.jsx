@@ -2,6 +2,7 @@ import { Menu } from 'lucide-react';
 import { motion } from 'motion/react';
 import React from 'react';
 
+import logo from '@/assets/logo/logo2.png';
 import { navItems, personalDetails } from '@/data/myInfo';
 import { getInitials } from '@/utils/initials';
 import { transitions } from '@/utils/transitions';
@@ -56,13 +57,12 @@ const Navbar = () => {
           <div className='flex flex-shrink-0 items-center'>
             <a
               href='#'
-              className='text-responsive-4.5 font-press-start-2p font-bold'
+              className='text-responsive-4.5 font-press-start-2p flex items-center gap-2 font-bold'
             >
-              <span className='hidden md:inline'>{personalDetails.name}</span>
-              <span className='md:hidden'>
-                {personalDetails.initials}
-                {/* {getInitials(personalDetails.name)} */}
-              </span>
+              <img src={logo} alt='Logo' className='h-11 w-auto' />
+
+              {/* <span className='hidden md:inline'>{personalDetails.name}</span> */}
+              {/* <span className='md:hidden'>{personalDetails.initials}</span> */}
             </a>
           </div>
 
@@ -96,8 +96,10 @@ const Navbar = () => {
                       key={item.name}
                       onClick={() => handleScrollToSection(item.href)}
                     >
-                      <item.icon />
-                      <span>{item.name}</span>
+                      <div className='flex items-center gap-2'>
+                        <item.icon />
+                        <span>{item.name}</span>
+                      </div>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuGroup>

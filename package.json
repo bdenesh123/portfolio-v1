@@ -26,6 +26,8 @@
     "@react-three/postprocessing": "^3.0.4",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.0.14",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
@@ -36,8 +38,8 @@
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.1.0",
     "tailwindcss": "^4.0.14",
-    "three": "^0.174.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.174.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.25",

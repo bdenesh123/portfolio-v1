@@ -7,7 +7,7 @@ import { MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 import React from 'react';
 
-import profilePic from '@/assets/images/deadspace.jpg';
+import profilePic from '@/assets/images/profilepic.jpg';
 import { personalDetails, socialItems, techStack } from '@/data/myInfo';
 import { transitions } from '@/utils/transitions';
 
@@ -64,14 +64,14 @@ const Profile = () => {
               <img
                 src={profilePic}
                 alt='Profile Picture'
-                className='h-[90px] w-[80px]  rounded-3xl object-cover'
+                className='h-[120px] w-[120px]  rounded-3xl object-cover'
               />
               <div className='flex w-full flex-col items-center gap-2 self-center p-2 md:items-start'>
                 {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
                 <div className='xs-max:flex-row flex  items-center gap-1'>
-                  <span className='text-[2.5rem] font-extrabold'>
+                  <span className='font-press-start-2p text-[1.8rem] font-extrabold'>
                     {personalDetails.name}
                   </span>
 
@@ -118,14 +118,14 @@ const Profile = () => {
               <span>
                 {personalDetails.description}
 
-                <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                   className='ml-1 inline h-5 w-5'
                   icon={faWandMagicSparkles}
                 />
                 <FontAwesomeIcon
                   className='ml-1 inline h-5 w-5'
                   icon={faLaptop}
-                />
+                /> */}
               </span>
             </div>
             <div className='font-vt323 rounded-lg border px-4 py-2 backdrop-blur-md dark:bg-[color:rgba(33,33,33,0.3)]'>

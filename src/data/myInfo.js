@@ -1,6 +1,13 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import dayjs from 'dayjs';
-import { Briefcase, Database, FolderOpen, User } from 'lucide-react';
+import {
+  Briefcase,
+  Database,
+  FolderOpen,
+  Laptop,
+  LaptopMinimal,
+  User,
+} from 'lucide-react';
 
 import FontAwesomeIcon from '@/assets/icons/FontAwesomeIcon';
 import GitlabIcon from '@/assets/icons/Gitlab';
@@ -12,6 +19,7 @@ import ReactIcon from '@/assets/icons/ReactIcon';
 import ReduxIcon from '@/assets/icons/ReduxIcon';
 import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
+import VercelIcon from '@/assets/icons/VercelIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
 import dummyImage from '@/assets/images/carpic.jpg';
 
@@ -22,14 +30,19 @@ export const techStack = [
   { id: 'react', label: 'React', icon: ReactIcon },
   { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
   { id: 'python', label: 'Python', icon: PythonIcon },
+  { id: 'motion', label: 'Motion', icon: MotionJsIcon },
+
   { id: 'tailwind', label: 'Tailwind', icon: TailwindCssIcon },
   { id: 'mui', label: 'MUI', icon: MaterialUiIcon },
-  { id: 'motion', label: 'Motion', icon: MotionJsIcon },
+
   { id: 'shadcn', label: 'Shadcn UI', icon: ShadcnUiIcon },
   { id: 'fontawesome', label: 'Font Awesome', icon: FontAwesomeIcon },
+
   { id: 'redux', label: 'Redux', icon: ReduxIcon },
-  { id: 'vite', label: 'Vite.js', icon: ViteJsIcon },
+
   { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
+  { id: 'vite', label: 'Vite.js', icon: ViteJsIcon },
+  { id: 'vercel', label: 'Vercel', icon: VercelIcon },
   // { id: 'mysql', label: 'SQL', icon: Database },
 ];
 // Personal
@@ -40,7 +53,7 @@ export const personalDetails = {
   location: 'Cheras, Kuala Lumpur, Malaysia',
   greetMessage: "Hi, I'm Denesh!",
   description:
-    "I'm a software engineer with 4 years of experience, specializing in frontend development. I build scalable and high-performance web applications with modern technologies. 🧠🚀",
+    'Self-taught Frontend Engineer from a non-tech background, driven by grit and curiosity. I build responsive, user-focused websites with React.js and JavaScript, improving, and growing one line of code at a time.👋',
   experiences: [
     {
       startDate: '2023',
@@ -141,7 +154,7 @@ export const projectDetails = [
 export const navItems = [
   { name: 'Profile', href: '#profile', icon: User },
   { name: 'Experience', href: '#experience', icon: Briefcase },
-  { name: 'Projects', href: '#projects', icon: FolderOpen },
+  { name: 'Projects', href: '#projects', icon: Laptop },
 ];
 
 // Socials
@@ -161,5 +174,5 @@ export const socialItems = [
 // App
 export const appInfo = {
   version: `v${import.meta.env.VITE_APP_VERSION}`,
-  lastUpdated: dayjs('2025-06-04').format('DD MMMM YYYY'),
+  lastUpdated: dayjs('2025-07-12').format('DD MMMM YYYY'),
 };
