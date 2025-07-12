@@ -82,30 +82,22 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button - Hide on screens ≥768px */}
-          <div className='flex items-center md:hidden'>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant='outline' size='icon'>
-                  <Menu />
-                </Button>
-              </DropdownMenuTrigger>
+          <div className='flex items-center gap-2 md:hidden'>
+            {/* Nav items as direct icons */}
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className='text-responsive-3 px-3 py-2 font-medium'
+                aria-label={item.name}
+              >
+                <item.icon className='h-[1.2rem] w-[1.2rem]' />
+                <span className='sr-only'>{item.name}</span>
+              </a>
+            ))}
 
-              <DropdownMenuContent className='w-30'>
-                <DropdownMenuGroup>
-                  {navItems.map((item) => (
-                    <DropdownMenuItem
-                      key={item.name}
-                      onClick={() => handleScrollToSection(item.href)}
-                    >
-                      <div className='flex items-center gap-2'>
-                        <item.icon />
-                        <span>{item.name}</span>
-                      </div>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuGroup>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* Theme toggle menu as a dropdown */}
+            <ThemeModeMenu />
           </div>
         </div>
       </div>
