@@ -131,7 +131,7 @@ export const getProjectDetails = (isDarkMode) => [
     url: 'https://your-portfolio-url.com',
     image: isDarkMode ? portfolioDark : portfolioLight,
     description:
-      'A modern, responsive portfolio website built with React, Framer Motion, and Tailwind CSS. Designed to highlight my development journey, showcase projects, and reflect my passion for clean, interactive user interfaces. Features smooth animations, dark mode, and modular component design.',
+      'A responsive portfolio built with React, Framer Motion, and Tailwind CSS. Showcases projects with smooth animations, dark mode, and a modular design.',
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },
@@ -146,7 +146,7 @@ export const getProjectDetails = (isDarkMode) => [
     url: 'https://react-airbnb-project.vercel.app/',
     image: isDarkMode ? airbnbDark : airbnbLight,
     description:
-      'An online booking platform inspired by Airbnb, built with React, Redux, and Tailwind CSS. It features dynamic listings, authentication with JWT, protected routes, and seamless navigation via React Router. The project showcases modern frontend practices including global state management, data fetching with React Query, and responsive UI design.',
+      'An Airbnb-inspired booking app with React, Redux, and Tailwind. Features listings, auth with JWT, protected routes, and responsive design.',
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },

@@ -8,14 +8,6 @@ import { getInitials } from '@/utils/initials';
 import { transitions } from '@/utils/transitions';
 
 import ThemeModeMenu from '../ThemeModeMenu';
-import {
-  Button,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '../ui';
 
 const Navbar = () => {
   const nav = {

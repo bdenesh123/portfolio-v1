@@ -73,7 +73,7 @@ const ProjectTab = (props) => {
         <motion.div
           ref={contentRef}
           className={cn(
-            'p-1 text-sm',
+            'p-1 pt-0 text-sm',
             isDarkMode ? 'text-gray-300' : 'text-gray-800',
           )}
           variants={contentVariant}
