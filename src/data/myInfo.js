@@ -93,6 +93,7 @@ export const personalDetails = {
         { id: 'cad', label: 'SolidWorks' },
         { id: 'simulation', label: 'Simulation Software (Altair)' },
         { id: '4dprint', label: '4D Printing' },
+        { id: 'smp', label: 'Shape Memory Polymers' },
       ],
     },
     {
