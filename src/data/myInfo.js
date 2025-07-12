@@ -45,7 +45,7 @@ export const personalDetails = {
   location: 'Cheras, Kuala Lumpur, Malaysia',
   greetMessage: "Hi, I'm Denesh!",
   description:
-    'Self-taught Frontend Engineer from non-tech background, driven by grit and curiosity. I build responsive websites with React.js and JavaScript, improving and growing with one line of code at a time. 👨‍💻',
+    'Self-taught Frontend Engineer, driven by grit and curiosity. I build responsive websites with React.js and JavaScript, improving and growing with one line of code at a time. 👨‍💻',
   experiences: [
     {
       startDate: 'Oct 2023',
