@@ -62,10 +62,20 @@ const Experience = () => {
                   id='experience-timeline-item-content'
                   className='flex w-full flex-col gap-2 px-2 pb-8 pt-1'
                 >
-                  <span className='text-responsive-3'>
+                  {/* {experience.logo && (
+                    <img
+                      src={experience.logo}
+                      alt={`${experience.company} logo`}
+                      className='h-10 w-10 object-contain'
+                    />
+                  )} */}
+                  {/* <span className='text-responsive-3'>
                     {`${experience.startDate} - ${
                       isCurrent ? 'Present' : experience.endDate
                     }`}
+                  </span> */}
+                  <span className='text-responsive-3'>
+                    {`${experience.startDate} - ${experience.endDate}`}
                   </span>
                   <p className='text-responsive-3.25 mb-0 font-semibold'>
                     {`${experience.title} - ${experience.company}`}

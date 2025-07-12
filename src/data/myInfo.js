@@ -9,12 +9,16 @@ import MaterialUiIcon from '@/assets/icons/MaterialUiIcon';
 import MotionJsIcon from '@/assets/icons/MotionIcon';
 import PythonIcon from '@/assets/icons/PythonIcon';
 import ReactIcon from '@/assets/icons/ReactIcon';
+import ReduxIcon from '@/assets/icons/ReduxIcon';
 // import ReduxIcon from '@/assets/icons/ReduxIcon';
 import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
 import VercelIcon from '@/assets/icons/VercelIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
 import dummyImage from '@/assets/images/carpic.jpg';
+import toyotiresLogo from '@/assets/images/toyotires.jpg';
+import utpLogo from '@/assets/images/UTP.jpg';
+import wvbLogo from '@/assets/images/wvb1.png';
 
 const currentUrl = window.location.href;
 
@@ -42,79 +46,65 @@ export const personalDetails = {
   location: 'Cheras, Kuala Lumpur, Malaysia',
   greetMessage: "Hi, I'm Denesh!",
   description:
-    'Self-taught Frontend Engineer from non-tech background, driven by grit and curiosity. I build responsive, user-focused websites with React.js and JavaScript, improving and growing with one line of code at a time. 👨‍💻',
+    'Self-taught Frontend Engineer from non-tech background, driven by grit and curiosity. I build responsive websites with React.js and JavaScript, improving and growing with one line of code at a time. 👨‍💻',
   experiences: [
     {
-      startDate: '2023',
-      endDate: '',
-      logo: '',
-      company: 'Boost Credit',
-      title: 'Software Engineer',
-      // description:
-      //   "Developed Boost PayFlex, enabling seamless payment flexibility for millions of merchants, while enhancing SME lending applications, internal management tools, and scalable admin panel templates. Focused on improving user experience, streamlining workflows, and optimizing application performance.",
+      startDate: 'Oct 2023',
+      endDate: 'Apr 2025',
+      logo: wvbLogo,
+      company: 'World Vest Base',
+      title: 'Frontend Engineer',
       description: [
-        'Developed ',
-        {
-          name: 'Boost PayFlex',
-          url: 'https://myboost.co/feature/boost-payflex',
-        },
-        ' enabling seamless payment flexibility for millions of merchants, while enhancing ',
-        {
-          name: 'SME lending applications',
-          url: 'https://myboost.co/credit/capital-by-boost-credit',
-        },
-        ' internal management tools, and scalable admin panel templates. Focused on improving user experience, streamlining workflows, and optimizing application performance.',
+        'Developed real-time dashboard features and dynamic platform pages for a global financial intelligence platform. Implemented interactive financial data tables, custom visualizations, and page-specific maintenance handling. Enhanced dark mode UI, integrated REST APIs, and collaborated cross-functionally to deliver high-performance, user-centric experiences.',
       ],
+      // description: [
+      //   'Developed ',
+      //   {
+      //     name: 'Boost PayFlex',
+      //     url: 'https://myboost.co/feature/boost-payflex',
+      //   },
+      //   ' enabling seamless payment flexibility for millions of merchants, while enhancing ',
+      //   {
+      //     name: 'SME lending applications',
+      //     url: 'https://myboost.co/credit/capital-by-boost-credit',
+      //   },
+      //   ' internal management tools, and scalable admin panel templates. Focused on improving user experience, streamlining workflows, and optimizing application performance.',
+      // ],
       techStack: [
-        { id: 'react', label: 'React', icon: ReactIcon },
-        { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
-        { id: 'python', label: 'Python', icon: PythonIcon },
-        { id: 'tailwind', label: 'Tailwind', icon: TailwindCssIcon },
-        { id: 'mui', label: 'MUI', icon: MaterialUiIcon },
+        { id: 'react', label: 'React' },
+        { id: 'javascript', label: 'JavaScript' },
+        { id: 'mui', label: 'MUI' },
+        { id: 'redux', label: 'Redux' },
+        { id: 'gitlab', label: 'GitLab' },
       ],
     },
     {
-      startDate: '2020',
-      endDate: '2023',
-      logo: '',
-      company: 'Komaci Network',
-      title: 'Software Engineer',
-      // description:
-      //   "Developed and improved Komaci (micro-influencing) and EZlife (social commerce, 250+ sellers, 210K+ transactions). Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
+      startDate: 'Mar 2022',
+      endDate: 'Apr 2023',
+      logo: utpLogo,
+      company: 'Universiti Teknologi PETRONAS',
+      title: 'Research Officer',
       description: [
-        'Developed and improved ',
-        {
-          name: 'Komaci',
-          url: 'https://komacinetwork.com/my/brand',
-        },
-        ' (micro-influencing) and ',
-        {
-          name: 'EZlife',
-          url: 'https://ezlive.biz/my-en',
-        },
-        ' (social commerce, 250+ sellers, 210K+ transactions). Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.',
+        'Designed and simulated a soft gripper mechanism using shape memory polymers for application in soft robotics. Led the design and 4D printing processes for developing functional soft grippers while collaborating with research team members to ensure seamless project progression under the PETRONAS Future Positioning Project.',
       ],
       techStack: [
-        { id: 'react', label: 'React', icon: ReactIcon },
-        { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
-        { id: 'python', label: 'Python', icon: PythonIcon },
-        { id: 'tailwind', label: 'Tailwind', icon: TailwindCssIcon },
-        { id: 'mui', label: 'MUI', icon: MaterialUiIcon },
+        { id: 'cad', label: 'SolidWorks' },
+        { id: 'simulation', label: 'Simulation Software (Altair)' },
+        { id: '4dprint', label: '4D Printing' },
       ],
     },
     {
-      startDate: '2019',
-      endDate: '2019',
-      logo: '',
-      company: 'Eboss Group Holdings',
-      title: 'Intern, Software Developer',
-      description: ['Minor enhancements & bugs fixing backend logic.'],
+      startDate: 'Jun 2020',
+      endDate: 'Dec 2020',
+      logo: toyotiresLogo,
+      company: 'Toyo Tyres Malaysia',
+      title: 'Engineering Intern',
+      description: [
+        'Assisted the engineering department in maintaining mechanical and electrical systems, monitored work progress, and implemented quality control procedures. Ensured engineering operations were in line with regulatory, legal, and contractual standards throughout the internship period.',
+      ],
       techStack: [
-        { id: 'react', label: 'React', icon: ReactIcon },
-        { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
-        { id: 'python', label: 'Python', icon: PythonIcon },
-        { id: 'tailwind', label: 'Tailwind', icon: TailwindCssIcon },
-        { id: 'mui', label: 'MUI', icon: MaterialUiIcon },
+        { id: 'excel', label: 'Excel' },
+        { id: 'qa', label: 'Quality Assurance' },
       ],
     },
   ],
