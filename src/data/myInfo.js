@@ -117,7 +117,7 @@ export const projectDetails = [
     name: 'Portfolio Project',
     repoUrl: 'https://github.com/bdenesh123/portfolio-v1',
     url: currentUrl,
-    image: portfolioProjectScreenshot,
+    // image: portfolioProjectScreenshot,
     description:
       'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
     techStack: [
@@ -131,7 +131,7 @@ export const projectDetails = [
     name: 'Airbnb Clone',
     repoUrl: 'https://github.com/bdenesh123/airbnb-project',
     url: 'https://react-airbnb-project.vercel.app/',
-    image: airbnbProjectScreenshot,
+    // image: airbnbProjectScreenshot,
     description:
       'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
     techStack: [
