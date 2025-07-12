@@ -22,7 +22,7 @@ const App = () => {
         <ShootingStars />
         <StarsBackground className='pointer-events-none' />
         <Navbar />
-        <div className='z-1 relative mx-auto mb-20 flex w-full max-w-2xl flex-col gap-6 px-4 pt-20'>
+        <div className='z-1 relative mx-auto flex w-full max-w-2xl flex-col gap-6 px-4 pt-20'>
           <Profile />
           <Experience />
           <Projects />

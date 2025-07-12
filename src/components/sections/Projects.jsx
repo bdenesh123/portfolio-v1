@@ -1,3 +1,6 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ExternalLink, FolderGit, Github, GithubIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
@@ -6,9 +9,6 @@ import { projectDetails } from '@/data/myInfo';
 import useResponsive from '@/hooks/useResponsive';
 
 import HoverButton from '../common/HoverButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const ProjectTab = (props) => {
   const { previewData } = props;
