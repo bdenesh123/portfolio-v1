@@ -3,7 +3,7 @@ import {
   faWandMagicSparkles,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { MapPin } from 'lucide-react';
+import { Mail, MapPin, Phone, Smartphone } from 'lucide-react';
 import { motion } from 'motion/react';
 import React from 'react';
 
@@ -87,9 +87,24 @@ const Profile = () => {
                 {/* <span className="font-light text-sm">
                 Open to New Opportunities
               </span> */}
-                <div className='text-responsive-3 flex items-center gap-1 font-light md:mb-4'>
-                  <MapPin className='h-[20px] w-[20px]' />
-                  <p className='mb-0'>{personalDetails.location}</p>
+                <div className='text-responsive-3 flex items-center gap-1 font-light md:mb-2'>
+                  <Mail className='h-[20px] w-[20px]' />
+                  <a
+                    href={`mailto:${personalDetails.email}`}
+                    className='text-inherit hover:underline'
+                  >
+                    {personalDetails.email}
+                  </a>
+                </div>
+
+                <div className='text-responsive-3 flex items-center gap-1 font-light md:mb-2'>
+                  <Smartphone className='h-[20px] w-[20px]' />
+                  <a
+                    href={`tel:${personalDetails.hp.replace(/\s+/g, '')}`}
+                    className='text-inherit hover:underline'
+                  >
+                    {personalDetails.hp}
+                  </a>
                 </div>
                 <div className='flex w-full justify-center gap-2 md:justify-end'>
                   <div className='flex gap-2'>

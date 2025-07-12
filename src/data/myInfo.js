@@ -45,6 +45,8 @@ export const personalDetails = {
   initials: 'DN',
   position: 'Frontend Engineer',
   location: 'Cheras, Kuala Lumpur, Malaysia',
+  email: 'bdenesh123@gmail.com',
+  hp: '+60 194776236',
   greetMessage: "Hi, I'm Denesh!",
   description:
     'Self-taught Frontend Engineer, driven by grit and curiosity. I build responsive websites with React.js and JavaScript, improving and growing with one line of code at a time. 👨‍💻',
