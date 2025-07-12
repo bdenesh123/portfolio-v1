@@ -9,7 +9,7 @@ import MaterialUiIcon from '@/assets/icons/MaterialUiIcon';
 import MotionJsIcon from '@/assets/icons/MotionIcon';
 import PythonIcon from '@/assets/icons/PythonIcon';
 import ReactIcon from '@/assets/icons/ReactIcon';
-import ReduxIcon from '@/assets/icons/ReduxIcon';
+// import ReduxIcon from '@/assets/icons/ReduxIcon';
 // import ReduxIcon from '@/assets/icons/ReduxIcon';
 import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
