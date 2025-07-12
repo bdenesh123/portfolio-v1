@@ -1,6 +1,12 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import dayjs from 'dayjs';
-import { Briefcase, Folder, Laptop, User } from 'lucide-react';
+import {
+  Briefcase,
+  BriefcaseBusiness,
+  Folder,
+  Laptop,
+  User,
+} from 'lucide-react';
 
 import FontAwesomeIcon from '@/assets/icons/FontAwesomeIcon';
 import GitlabIcon from '@/assets/icons/Gitlab';
@@ -154,7 +160,7 @@ export const getProjectDetails = (isDarkMode) => [
 // Layout
 export const navItems = [
   { name: 'Profile', href: '#profile', icon: User },
-  { name: 'Experience', href: '#experience', icon: Briefcase },
+  { name: 'Experience', href: '#experience', icon: BriefcaseBusiness },
   { name: 'Projects', href: '#projects', icon: Folder },
 ];
 
