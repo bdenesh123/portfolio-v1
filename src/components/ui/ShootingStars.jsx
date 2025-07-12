@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/lib/utils/cn';
+
 import { useTheme } from '../ThemeProvider';
 
 const getRandomStartPoint = () => {
@@ -9,43 +10,44 @@ const getRandomStartPoint = () => {
 
   switch (side) {
     case 0:
-      return { x: offset, y: 0, angle: 45 };
+      return { x: offset, y: 0, angle: 45 }; // Top
     case 1:
-      return { x: window.innerWidth, y: offset, angle: 135 };
+      return { x: window.innerWidth, y: offset, angle: 135 }; // Right
     case 2:
-      return { x: offset, y: window.innerHeight, angle: 225 };
+      return { x: offset, y: window.innerHeight, angle: 225 }; // Bottom
     case 3:
-      return { x: 0, y: offset, angle: 315 };
+      return { x: 0, y: offset, angle: 315 }; // Left
     default:
       return { x: 0, y: 0, angle: 45 };
   }
 };
 
 export const ShootingStars = ({
-  minSpeed = 10,
-  maxSpeed = 30,
-  minDelay = 1200,
-  maxDelay = 4200,
+  minSpeed = 2,
+  maxSpeed = 6,
+  minDelay = 1500,
+  maxDelay = 3000,
   starColor = '#9E00FF',
   trailColor = '#2EB9DF',
   starWidth = 10,
   starHeight = 1,
+  maxStars = 6, // ✅ Limit total stars
   className,
 }) => {
-  const theme = useTheme();
-  const isDarkMode = theme.theme === 'dark';
+  const { theme } = useTheme();
+  const isDarkMode = theme === 'dark';
 
-  const computedStarColor = isDarkMode ? '#9E00FF' : '#000000';
-  const computedTrailColor = isDarkMode ? '#2EB9DF' : '#333333';
+  const computedStarColor = isDarkMode ? '#ffffff' : '#000000'; // white on dark
+  const computedTrailColor = isDarkMode ? '#cccccc' : '#333333'; // soft gray trail
 
-  const [star, setStar] = useState(null);
+  const [stars, setStars] = useState([]);
   const svgRef = useRef(null);
 
   useEffect(() => {
     const createStar = () => {
       const { x, y, angle } = getRandomStartPoint();
       const newStar = {
-        id: Date.now(),
+        id: Date.now() + Math.random(),
         x,
         y,
         angle,
@@ -53,72 +55,62 @@ export const ShootingStars = ({
         speed: Math.random() * (maxSpeed - minSpeed) + minSpeed,
         distance: 0,
       };
-      setStar(newStar);
+
+      setStars((prev) => {
+        if (prev.length >= maxStars) return prev;
+        return [...prev, newStar];
+      });
 
       const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
       setTimeout(createStar, randomDelay);
     };
 
     createStar();
-    return () => {};
-  }, [minSpeed, maxSpeed, minDelay, maxDelay]);
+  }, [minSpeed, maxSpeed, minDelay, maxDelay, maxStars]);
 
   useEffect(() => {
-    const moveStar = () => {
-      if (star) {
-        setStar((prevStar) => {
-          if (!prevStar) return null;
-          const newX =
-            prevStar.x +
-            prevStar.speed * Math.cos((prevStar.angle * Math.PI) / 180);
-          const newY =
-            prevStar.y +
-            prevStar.speed * Math.sin((prevStar.angle * Math.PI) / 180);
-          const newDistance = prevStar.distance + prevStar.speed;
-          const newScale = 1 + newDistance / 100;
+    const moveStars = () => {
+      setStars((prevStars) =>
+        prevStars
+          .map((star) => {
+            const newX =
+              star.x + star.speed * Math.cos((star.angle * Math.PI) / 180);
+            const newY =
+              star.y + star.speed * Math.sin((star.angle * Math.PI) / 180);
+            const newDistance = star.distance + star.speed;
+            const newScale = 1 + newDistance / 100;
 
-          if (
-            newX < -20 ||
-            newX > window.innerWidth + 20 ||
-            newY < -20 ||
-            newY > window.innerHeight + 20
-          ) {
-            return null;
-          }
+            if (
+              newX < -20 ||
+              newX > window.innerWidth + 20 ||
+              newY < -20 ||
+              newY > window.innerHeight + 20
+            ) {
+              return null; // remove off-screen stars
+            }
 
-          return {
-            ...prevStar,
-            x: newX,
-            y: newY,
-            distance: newDistance,
-            scale: newScale,
-          };
-        });
-      }
+            return {
+              ...star,
+              x: newX,
+              y: newY,
+              distance: newDistance,
+              scale: newScale,
+            };
+          })
+          .filter(Boolean),
+      );
+
+      requestAnimationFrame(moveStars);
     };
 
-    const animationFrame = requestAnimationFrame(moveStar);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [star]);
+    moveStars();
+  }, []);
 
   return (
     <svg
       ref={svgRef}
       className={cn('absolute inset-0 h-full w-full', className)}
     >
-      {star && (
-        <rect
-          key={star.id}
-          x={star.x}
-          y={star.y}
-          width={starWidth * star.scale}
-          height={starHeight}
-          fill='url(#gradient)'
-          transform={`rotate(${star.angle}, ${
-            star.x + (starWidth * star.scale) / 2
-          }, ${star.y + starHeight / 2})`}
-        />
-      )}
       <defs>
         <linearGradient id='gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
           <stop
@@ -131,6 +123,20 @@ export const ShootingStars = ({
           />
         </linearGradient>
       </defs>
+
+      {stars.map((star) => (
+        <rect
+          key={star.id}
+          x={star.x}
+          y={star.y}
+          width={starWidth * star.scale}
+          height={starHeight}
+          fill='url(#gradient)'
+          transform={`rotate(${star.angle}, ${
+            star.x + (starWidth * star.scale) / 2
+          }, ${star.y + starHeight / 2})`}
+        />
+      ))}
     </svg>
   );
 };

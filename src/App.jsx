@@ -18,18 +18,25 @@ const App = () => {
   // }, []);
   return (
     <>
-      <div className='font-poppins  box-border min-h-[100dvh] text-white'>
-        <ShootingStars />
-        <StarsBackground className='pointer-events-none' />
-        <Navbar />
-        <div className='z-1 relative mx-auto flex w-full max-w-2xl flex-col gap-6 px-4 pt-20'>
-          <Profile />
-          <Experience />
-          <Projects />
+      <div className='font-poppins relative box-border min-h-[100dvh] overflow-hidden text-white'>
+        {/* Background layers */}
+        <div className='pointer-events-none absolute inset-0 z-0'>
+          <ShootingStars />
+          <StarsBackground />
         </div>
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
+
+        {/* Foreground content */}
+        <div className='relative z-10'>
+          <Navbar />
+          <div className='mx-auto flex w-full max-w-2xl flex-col gap-6 px-4 pt-20'>
+            <Profile />
+            <Experience />
+            <Projects />
+          </div>
+          <Footer />
+          <Analytics />
+          <SpeedInsights />
+        </div>
       </div>
     </>
   );
