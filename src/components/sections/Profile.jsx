@@ -88,6 +88,10 @@ const Profile = () => {
                 Open to New Opportunities
               </span> */}
                 <div className='text-responsive-3 flex items-center gap-1 font-light md:mb-2'>
+                  <MapPin className='h-[20px] w-[20px]' />
+                  <p className='mb-0'>{personalDetails.location}</p>
+                </div>
+                <div className='text-responsive-3 flex items-center gap-1 font-light md:mb-2'>
                   <Mail className='h-[20px] w-[20px]' />
                   <a
                     href={`mailto:${personalDetails.email}`}
