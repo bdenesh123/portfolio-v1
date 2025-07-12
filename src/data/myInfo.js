@@ -170,5 +170,5 @@ export const socialItems = [
 // App
 export const appInfo = {
   version: `v${import.meta.env.VITE_APP_VERSION}`,
-  lastUpdated: dayjs('2025-07-12').format('DD MMMM YYYY'),
+  lastUpdated: dayjs('2025-03-12').format('DD/MMM/YY'), // Outputs: '12-Mar-25'
 };
