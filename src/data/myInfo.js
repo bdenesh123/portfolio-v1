@@ -15,8 +15,8 @@ import VercelIcon from '@/assets/icons/VercelIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
 import airbnbProjectScreenshot from '@/assets/images/homepage.png';
 import portfolioProjectScreenshot from '@/assets/images/portfoliov1.png';
-import toyotiresLogo from '@/assets/images/toyotires.jpg';
-import utpLogo from '@/assets/images/UTP.jpg';
+import toyotiresLogo from '@/assets/images/toyotires.png';
+import utpLogo from '@/assets/images/utp.png';
 import wvbLogo from '@/assets/images/wvb1.png';
 
 const currentUrl = window.location.href;
