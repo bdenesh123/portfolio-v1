@@ -1,18 +1,22 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ExternalLink, FolderGit, Github, GithubIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 
-import { projectDetails } from '@/data/myInfo';
+import { getProjectDetails } from '@/data/myInfo';
 import useResponsive from '@/hooks/useResponsive';
+import { cn } from '@/lib/utils/cn';
 
 import HoverButton from '../common/HoverButton';
+import { useTheme } from '../ThemeProvider';
 
 const ProjectTab = (props) => {
   const { previewData } = props;
   const { name, image, repoUrl, url, description, techStack } = previewData;
+
+  const { theme } = useTheme();
+  const isDarkMode = theme === 'dark';
 
   const { windowWidth } = useResponsive();
 
@@ -63,14 +67,15 @@ const ProjectTab = (props) => {
         className='absolute inset-0 h-full w-full overflow-hidden rounded-lg border bg-gray-700 object-cover'
       />
 
-      <div className='mt-24 overflow-hidden rounded-lg bg-gray-700/15 p-4 backdrop-blur-md'>
-        <span className='text-responsive-3.5 p-2 font-bold text-white'>
-          {name}
-        </span>
+      <div className='mt-24 overflow-hidden rounded-lg bg-gray-400/15 p-4 backdrop-blur-md'>
+        <span className='text-responsive-3.5 p-2 font-bold '>{name}</span>
 
         <motion.div
           ref={contentRef}
-          className='text-responsive-3 p-1 text-gray-300'
+          className={cn(
+            'p-1 text-sm',
+            isDarkMode ? 'text-gray-300' : 'text-gray-800',
+          )}
           variants={contentVariant}
         >
           {description}
@@ -79,9 +84,7 @@ const ProjectTab = (props) => {
         <div className='mt-2 flex flex-col items-center justify-between gap-4 md:mt-0 md:flex-row'>
           <div className='text-responsive-3.5 font-vt323 flex flex-wrap gap-2 '>
             {techStack.map((stack) => (
-              <span className='text-white' key={stack.id}>
-                {stack.label}
-              </span>
+              <span key={stack.id}>{stack.label}</span>
             ))}
           </div>
           <div className='flex justify-end gap-2'>
@@ -110,6 +113,10 @@ const ProjectTab = (props) => {
 };
 
 const Projects = () => {
+  const { theme } = useTheme();
+  const isDarkMode = theme === 'dark';
+
+  const projectDetails = getProjectDetails(isDarkMode);
   return (
     <section id='projects' className='scroll-mt-nav'>
       <div id='projects-wrapper' className='flex flex-col gap-4 p-2'>

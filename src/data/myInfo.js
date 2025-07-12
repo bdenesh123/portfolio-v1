@@ -13,8 +13,10 @@ import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
 import VercelIcon from '@/assets/icons/VercelIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
-import airbnb from '@/assets/images/homepage.jpg';
-import portfolio from '@/assets/images/portfoliov1.jpg';
+import airbnbDark from '@/assets/images/airbnbDark.jpg';
+import airbnbLight from '@/assets/images/airbnbLight.jpg';
+import portfolioDark from '@/assets/images/portfoliov1Dark.jpg';
+import portfolioLight from '@/assets/images/portfoliov1Light.jpg';
 import toyotiresLogo from '@/assets/images/toyotires.png';
 import utpLogo from '@/assets/images/utp.png';
 import wvbLogo from '@/assets/images/wvb1.png';
@@ -100,7 +102,7 @@ export const personalDetails = {
       company: 'Toyo Tyres Malaysia',
       title: 'Engineering Intern',
       description: [
-        'Assisted the engineering department in maintaining mechanical and electrical systems, monitored work progress, and implemented quality control procedures. Ensured engineering operations were in line with regulatory, legal, and contractual standards throughout the internship period.',
+        'Assisted the engineering department in maintaining mechanical and electrical systems, monitored work progress, and implemented quality control procedures.',
       ],
       techStack: [
         { id: 'excel', label: 'Excel' },
@@ -112,15 +114,15 @@ export const personalDetails = {
 
 // Projects
 
-export const projectDetails = [
+export const getProjectDetails = (isDarkMode) => [
   {
     id: 'portfolio.v1',
     name: 'Portfolio Project',
     repoUrl: 'https://github.com/bdenesh123/portfolio-v1',
-    url: currentUrl,
-    image: portfolio,
+    url: 'https://your-portfolio-url.com',
+    image: isDarkMode ? portfolioDark : portfolioLight,
     description:
-      'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
+      'A modern, responsive portfolio website built with React, Framer Motion, and Tailwind CSS. Designed to highlight my development journey, showcase projects, and reflect my passion for clean, interactive user interfaces. Features smooth animations, dark mode, and modular component design.',
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },
@@ -133,9 +135,9 @@ export const projectDetails = [
     name: 'Airbnb Clone',
     repoUrl: 'https://github.com/bdenesh123/airbnb-project',
     url: 'https://react-airbnb-project.vercel.app/',
-    image: airbnb,
+    image: isDarkMode ? airbnbDark : airbnbLight,
     description:
-      'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
+      'An online booking platform inspired by Airbnb, built with React, Redux, and Tailwind CSS. It features dynamic listings, authentication with JWT, protected routes, and seamless navigation via React Router. The project showcases modern frontend practices including global state management, data fetching with React Query, and responsive UI design.',
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },

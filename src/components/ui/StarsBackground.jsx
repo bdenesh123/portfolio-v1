@@ -28,7 +28,7 @@ export const StarsBackground = ({
 
         const radius = isDarkMode
           ? Math.random() * 0.05 + 0.5 // thinner white stars for dark mode
-          : Math.random() * 0.05 + 0.8; // thicker black stars for light mode
+          : Math.random() * 0.05 + 0.6; // thicker black stars for light mode
 
         return {
           x: Math.random() * width,
