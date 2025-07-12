@@ -130,7 +130,7 @@ const Profile = () => {
             </div>
             <div className='font-vt323 rounded-lg border px-4 py-2 backdrop-blur-md dark:bg-[color:rgba(33,33,33,0.3)]'>
               <p className='text-responsive-4 mb-1 '>
-                Technologies I've recently worked with:
+                Technologies I've worked with:
               </p>
               <ul className='text-responsive-3.5 grid auto-cols-auto grid-flow-col grid-rows-3 gap-1'>
                 {techStack.map(({ id, label, icon: Icon }) => (
