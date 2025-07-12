@@ -13,7 +13,8 @@ import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
 import VercelIcon from '@/assets/icons/VercelIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
-import dummyImage from '@/assets/images/carpic.jpg';
+import airbnbProjectScreenshot from '@/assets/images/homepage.png';
+import portfolioProjectScreenshot from '@/assets/images/portfoliov1.png';
 import toyotiresLogo from '@/assets/images/toyotires.jpg';
 import utpLogo from '@/assets/images/UTP.jpg';
 import wvbLogo from '@/assets/images/wvb1.png';
@@ -113,10 +114,24 @@ export const personalDetails = {
 export const projectDetails = [
   {
     id: 'portfolio.v1',
-    name: 'portfolio.v1',
-    repoUrl: 'https://github.com/bryansimyf/bryansim-portfolio-v2',
+    name: 'Portfolio Project',
+    repoUrl: 'https://github.com/bdenesh123/portfolio-v1',
     url: currentUrl,
-    image: dummyImage,
+    image: portfolioProjectScreenshot,
+    description:
+      'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
+    techStack: [
+      { id: 'react', label: 'React', icon: ReactIcon },
+      { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
+      { id: 'python', label: 'Python', icon: PythonIcon },
+    ],
+  },
+  {
+    id: 'portfolio.v1',
+    name: 'Airbnb Clone',
+    repoUrl: 'https://github.com/bdenesh123/airbnb-project',
+    url: 'https://react-airbnb-project.vercel.app/',
+    image: airbnbProjectScreenshot,
     description:
       'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
     techStack: [
