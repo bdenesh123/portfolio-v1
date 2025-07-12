@@ -77,7 +77,8 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            {/* <ThemeModeMenu /> */}
+            {/* Light and Dark theme (for version 1.1) */}
+            <ThemeModeMenu />
           </div>
 
           {/* Mobile menu button - Hide on screens ≥768px */}

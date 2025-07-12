@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/lib/utils/cn';
 
+import { useTheme } from '../ThemeProvider';
+
 export const StarsBackground = ({
   starDensity = 0.00015,
   allStarsTwinkle = true,
@@ -10,6 +12,9 @@ export const StarsBackground = ({
   maxTwinkleSpeed = 1,
   className,
 }) => {
+  const theme = useTheme();
+  const isDarkMode = theme.theme === 'dark';
+
   const [stars, setStars] = useState([]);
   const canvasRef = useRef(null);
 
@@ -20,10 +25,15 @@ export const StarsBackground = ({
       return Array.from({ length: numStars }, () => {
         const shouldTwinkle =
           allStarsTwinkle || Math.random() < twinkleProbability;
+
+        const radius = isDarkMode
+          ? Math.random() * 0.05 + 0.5 // thinner white stars for dark mode
+          : Math.random() * 0.05 + 0.8; // thicker black stars for light mode
+
         return {
           x: Math.random() * width,
           y: Math.random() * height,
-          radius: Math.random() * 0.05 + 0.5,
+          radius,
           opacity: Math.random() * 0.5 + 0.5,
           twinkleSpeed: shouldTwinkle
             ? minTwinkleSpeed +
@@ -36,6 +46,7 @@ export const StarsBackground = ({
       starDensity,
       allStarsTwinkle,
       twinkleProbability,
+      isDarkMode,
       minTwinkleSpeed,
       maxTwinkleSpeed,
     ],
@@ -74,6 +85,7 @@ export const StarsBackground = ({
     minTwinkleSpeed,
     maxTwinkleSpeed,
     generateStars,
+    isDarkMode,
   ]);
 
   useEffect(() => {
@@ -90,7 +102,7 @@ export const StarsBackground = ({
       stars.forEach((star) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+        ctx.fillStyle = `rgba(${isDarkMode ? '255, 255, 255' : '0, 0, 0'}, ${star.opacity})`;
         ctx.fill();
 
         if (star.twinkleSpeed !== null) {
@@ -108,7 +120,7 @@ export const StarsBackground = ({
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [stars]);
+  }, [stars, theme.mode]);
 
   return (
     <canvas

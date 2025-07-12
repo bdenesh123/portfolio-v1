@@ -73,6 +73,7 @@ export const personalDetails = {
         { id: 'react', label: 'React' },
         { id: 'javascript', label: 'JavaScript' },
         { id: 'mui', label: 'MUI' },
+        { id: 'echarts', label: 'Apache ECharts' },
         { id: 'redux', label: 'Redux' },
         { id: 'gitlab', label: 'GitLab' },
       ],
@@ -123,11 +124,12 @@ export const projectDetails = [
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },
-      { id: 'python', label: 'Python' },
+      { id: 'motion', label: 'Motion' },
+      { id: 'tailwind', label: 'Tailwind' },
     ],
   },
   {
-    id: 'portfolio.v1',
+    id: 'airbnb',
     name: 'Airbnb Clone',
     repoUrl: 'https://github.com/bdenesh123/airbnb-project',
     url: 'https://react-airbnb-project.vercel.app/',
@@ -137,7 +139,9 @@ export const projectDetails = [
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },
-      { id: 'python', label: 'Python' },
+      { id: 'tailwind', label: 'Tailwind' },
+      { id: 'redux', label: 'Redux' },
+      { id: 'axios', label: 'Axios' },
     ],
   },
 ];

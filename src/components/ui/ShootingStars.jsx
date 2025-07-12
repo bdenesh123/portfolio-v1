@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/lib/utils/cn';
+import { useTheme } from '../ThemeProvider';
 
 const getRandomStartPoint = () => {
   const side = Math.floor(Math.random() * 4);
@@ -31,6 +32,12 @@ export const ShootingStars = ({
   starHeight = 1,
   className,
 }) => {
+  const theme = useTheme();
+  const isDarkMode = theme.theme === 'dark';
+
+  const computedStarColor = isDarkMode ? '#9E00FF' : '#000000';
+  const computedTrailColor = isDarkMode ? '#2EB9DF' : '#333333';
+
   const [star, setStar] = useState(null);
   const svgRef = useRef(null);
 
@@ -114,10 +121,13 @@ export const ShootingStars = ({
       )}
       <defs>
         <linearGradient id='gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
-          <stop offset='0%' style={{ stopColor: trailColor, stopOpacity: 0 }} />
+          <stop
+            offset='0%'
+            style={{ stopColor: computedTrailColor, stopOpacity: 0 }}
+          />
           <stop
             offset='100%'
-            style={{ stopColor: starColor, stopOpacity: 1 }}
+            style={{ stopColor: computedStarColor, stopOpacity: 1 }}
           />
         </linearGradient>
       </defs>

@@ -64,7 +64,9 @@ const ProjectTab = (props) => {
       />
 
       <div className='mt-24 overflow-hidden rounded-lg bg-gray-700/15 p-4 backdrop-blur-md'>
-        <span className='text-responsive-3.5 p-2 font-bold'>{name}</span>
+        <span className='text-responsive-3.5 p-2 font-bold text-white'>
+          {name}
+        </span>
 
         <motion.div
           ref={contentRef}
@@ -75,9 +77,11 @@ const ProjectTab = (props) => {
         </motion.div>
 
         <div className='mt-2 flex flex-col items-center justify-between gap-4 md:mt-0 md:flex-row'>
-          <div className='text-responsive-3.5 font-vt323 flex flex-wrap gap-2'>
+          <div className='text-responsive-3.5 font-vt323 flex flex-wrap gap-2 '>
             {techStack.map((stack) => (
-              <span key={stack.id}>{stack.label}</span>
+              <span className='text-white' key={stack.id}>
+                {stack.label}
+              </span>
             ))}
           </div>
           <div className='flex justify-end gap-2'>
