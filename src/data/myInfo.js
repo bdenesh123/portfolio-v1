@@ -13,8 +13,6 @@ import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
 import VercelIcon from '@/assets/icons/VercelIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
-// import airbnbProjectScreenshot from '@/assets/images/homepage.png';
-// import portfolioProjectScreenshot from '@/assets/images/portfoliov1.png';
 import toyotiresLogo from '@/assets/images/toyotires.png';
 import utpLogo from '@/assets/images/utp.png';
 import wvbLogo from '@/assets/images/wvb1.png';
@@ -121,9 +119,9 @@ export const projectDetails = [
     description:
       'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
     techStack: [
-      { id: 'react', label: 'React', icon: ReactIcon },
-      { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
-      { id: 'python', label: 'Python', icon: PythonIcon },
+      { id: 'react', label: 'React' },
+      { id: 'javascript', label: 'JavaScript' },
+      { id: 'python', label: 'Python' },
     ],
   },
   {
@@ -135,9 +133,9 @@ export const projectDetails = [
     description:
       'A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.',
     techStack: [
-      { id: 'react', label: 'React', icon: ReactIcon },
-      { id: 'javascript', label: 'JavaScript', icon: JavascriptIcon },
-      { id: 'python', label: 'Python', icon: PythonIcon },
+      { id: 'react', label: 'React' },
+      { id: 'javascript', label: 'JavaScript' },
+      { id: 'python', label: 'Python' },
     ],
   },
 ];
