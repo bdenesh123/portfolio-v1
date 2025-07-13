@@ -128,7 +128,7 @@ export const getProjectDetails = (isDarkMode) => [
     id: 'portfolio.v1',
     name: 'Portfolio Project',
     repoUrl: 'https://github.com/bdenesh123/portfolio-v1',
-    url: 'https://your-portfolio-url.com',
+    url: 'https://deneshwaran-portfolio-v1.vercel.app/',
     image: isDarkMode ? portfolioDark : portfolioLight,
     description:
       'A responsive portfolio built with React, Framer Motion, and Tailwind CSS. Showcases projects with smooth animations, dark mode, and a modular design.',
