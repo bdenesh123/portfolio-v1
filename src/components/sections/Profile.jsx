@@ -70,28 +70,18 @@ const Profile = () => {
                 {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
-                {/* Mobile layout */}
-                <div className='flex flex-col items-center gap-1 sm:hidden'>
+                <div className='flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:justify-start sm:gap-1'>
                   <span className='font-press-start-2p text-[1.4rem] font-extrabold'>
                     {personalDetails.name}
                   </span>
 
-                  <span className='font-vt323  text-[1.5rem] font-medium'>
-                    {personalDetails.position}
-                  </span>
-                </div>
-
-                {/* Desktop layout */}
-                <div className='hidden flex-row items-center gap-1 sm:flex'>
-                  <span className='font-press-start-2p text-[1.4rem] font-extrabold'>
-                    {personalDetails.name}
-                  </span>
+                  {/* Separator only visible on sm and above */}
                   <Separator
                     orientation='vertical'
-                    className='mx-1 h-8 bg-gray-700 dark:bg-gray-300'
+                    className='mx-1 hidden h-8 bg-gray-700 dark:bg-gray-300 sm:block'
                   />
 
-                  <span className='font-vt323  text-[1.6rem] font-medium'>
+                  <span className='font-vt323 text-[1.5rem] font-medium sm:text-[1.6rem]'>
                     {personalDetails.position}
                   </span>
                 </div>
