@@ -74,12 +74,22 @@ const Experience = () => {
                       isCurrent ? 'Present' : experience.endDate
                     }`}
                   </span> */}
-                  <span className='text-responsive-3'>
-                    {`${experience.startDate} - ${experience.endDate}`}
-                  </span>
-                  <p className='text-responsive-3.25 mb-0 font-semibold'>
-                    {`${experience.title} - ${experience.company}`}
-                  </p>
+                  <div className='flex flex-col gap-0.5'>
+                    {/* Top row: Job title and date */}
+                    <div className='flex items-center justify-between'>
+                      <p className='text-responsive-3.25 mb-0 '>
+                        {experience.title}
+                      </p>
+                      <span className='text-responsive-3 '>
+                        {`${experience.startDate} - ${experience.endDate}`}
+                      </span>
+                    </div>
+
+                    {/* Company name: left-aligned, semi-bold */}
+                    <p className='text-responsive-3.25 mb-0 text-left font-semibold'>
+                      {experience.company}
+                    </p>
+                  </div>
                   <div className='text-responsive-3 mb-2 break-words text-gray-300'>
                     {experience.description.map((desc, index) => {
                       if (typeof desc === 'object') {
@@ -94,7 +104,7 @@ const Experience = () => {
                         );
                       }
 
-                      return <span key={index}>{desc}</span>;
+                      return <li key={index}>{desc}</li>;
                     })}
                   </div>
 

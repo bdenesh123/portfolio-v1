@@ -41,30 +41,34 @@ export const techStack = [
   // { id: 'fontawesome', label: 'Font Awesome', icon: FontAwesomeIcon },
   // { id: 'redux', label: 'Redux', icon: ReduxIcon },
   // { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
-  { id: 'vite', label: 'Vite.js', icon: ViteJsIcon },
+  { id: 'vite', label: 'Vite', icon: ViteJsIcon },
   { id: 'vercel', label: 'Vercel', icon: VercelIcon },
   // { id: 'mysql', label: 'SQL', icon: Database },
 ];
 // Personal
 export const personalDetails = {
-  name: 'Denesh',
+  name: 'Deneshwaran',
   initials: 'DN',
   position: 'Frontend Engineer',
   location: 'Cheras, Kuala Lumpur, Malaysia',
   email: 'bdenesh123@gmail.com',
-  hp: '+60 194776236',
+  hp: '+60 19 477 6236',
   greetMessage: "Hi, I'm Denesh!",
   description:
-    'Self-taught Frontend Engineer, driven by grit and curiosity. I build responsive websites with React.js and JavaScript, improving and growing with one line of code at a time. 👨‍💻',
+    'Self-taught developer passionate about building responsive, user-focused web experiences with React.js and JavaScript. Driven by curiosity and grit, I continuously improve my skills, one line of code at a time.',
   experiences: [
     {
       startDate: 'Oct 2023',
       endDate: 'Apr 2025',
       logo: wvbLogo,
-      company: 'World Vest Base',
+      company: 'World Vest Base | Global Financial Intelligence',
       title: 'Frontend Engineer',
       description: [
-        'Developed real-time dashboard features and dynamic platform pages for a global financial intelligence platform. Implemented interactive financial data tables, custom visualizations, and page-specific maintenance handling. Enhanced dark mode UI, integrated REST APIs, and collaborated cross-functionally to deliver high-performance, user-centric experiences.',
+        'Built real-time dashboards and dynamic platform pages.',
+        'Created interactive financial data tables and custom charts.',
+        'Enhanced dark mode UI and integrated REST APIs.',
+        'Implemented page-specific error handling and fallback UIs.',
+        'Collaborated cross-functionally to ship user-focused features.',
       ],
       // description: [
       //   'Developed ',
@@ -84,7 +88,7 @@ export const personalDetails = {
         { id: 'javascript', label: 'JavaScript' },
         { id: 'mui', label: 'MUI' },
         { id: 'echarts', label: 'Apache ECharts' },
-        { id: 'redux', label: 'Redux' },
+        { id: 'postman', label: 'Postman' },
         { id: 'gitlab', label: 'GitLab' },
       ],
     },
@@ -95,12 +99,13 @@ export const personalDetails = {
       company: 'Universiti Teknologi PETRONAS',
       title: 'Research Officer',
       description: [
-        'Designed and simulated a soft gripper mechanism using shape memory polymers for application in soft robotics. Led the design and 4D printing processes for developing functional soft grippers while collaborating with research team members to ensure seamless project progression under the PETRONAS Future Positioning Project.',
+        'Designed and simulated soft grippers using shape memory polymers.',
+        'Led 4D printing and prototyping processes.',
+        'Collaborated with research team on PETRONAS Future Positioning Project.',
       ],
       techStack: [
-        { id: 'cad', label: 'SolidWorks' },
-        { id: 'simulation', label: 'Simulation Software (Altair)' },
-        { id: '4dprint', label: '4D Printing' },
+        { id: 'simulation', label: 'Finite Element Analysis' },
+        { id: 'cad', label: '3D Modeling' },
         { id: 'smp', label: 'Shape Memory Polymers' },
       ],
     },
@@ -109,13 +114,15 @@ export const personalDetails = {
       endDate: 'Dec 2020',
       logo: toyotiresLogo,
       company: 'Toyo Tyres Malaysia',
-      title: 'Engineering Intern',
+      title: 'Internship',
       description: [
-        'Assisted the engineering department in maintaining mechanical and electrical systems, monitored work progress, and implemented quality control procedures.',
+        'Supported mechanical/electrical system maintenance.',
+        'Monitored project progress and assisted quality control.',
+        'Maintained technical documentation and records.',
       ],
       techStack: [
-        { id: 'excel', label: 'Excel' },
         { id: 'qa', label: 'Quality Assurance' },
+        { id: 'excel', label: 'Document Control' },
       ],
     },
   ],
@@ -147,6 +154,7 @@ export const getProjectDetails = (isDarkMode) => [
     image: isDarkMode ? airbnbDark : airbnbLight,
     description:
       'An Airbnb-inspired booking app with React, Redux, and Tailwind. Features listings, auth with JWT, protected routes, and responsive design.',
+
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },
@@ -180,6 +188,6 @@ export const socialItems = [
 
 // App
 export const appInfo = {
-  version: `v${import.meta.env.VITE_APP_VERSION}`,
-  lastUpdated: dayjs('2025-07-12').format('DD/MMM/YY'),
+  version: import.meta.env.VITE_APP_VERSION,
+  // lastUpdated: dayjs('2025-07-12').format('DD/MMM/YY'),
 };

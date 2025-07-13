@@ -70,17 +70,28 @@ const Profile = () => {
                 {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
-                <div className='xs-max:flex-row flex  items-center gap-1'>
+                {/* Mobile layout */}
+                <div className='flex flex-col items-center gap-1 sm:hidden'>
                   <span className='font-press-start-2p text-[1.4rem] font-extrabold'>
                     {personalDetails.name}
                   </span>
 
+                  <span className='font-vt323  text-[1.5rem] font-medium'>
+                    {personalDetails.position}
+                  </span>
+                </div>
+
+                {/* Desktop layout */}
+                <div className='hidden flex-row items-center gap-1 sm:flex'>
+                  <span className='font-press-start-2p text-[1.4rem] font-extrabold'>
+                    {personalDetails.name}
+                  </span>
                   <Separator
                     orientation='vertical'
-                    className='xs-max:block mx-1 h-8 bg-white'
+                    className='mx-1 h-8 bg-gray-700 dark:bg-gray-300'
                   />
 
-                  <span className='text-responsive-5 font-vt323 font-medium'>
+                  <span className='font-vt323  text-[1.6rem] font-medium'>
                     {personalDetails.position}
                   </span>
                 </div>
@@ -132,25 +143,12 @@ const Profile = () => {
             </div>
             <div
               id='profile-content-desc'
-              className='text-responsive-3.5 text-center font-light text-gray-300 md:text-left'
+              className='text-responsive-3.5 text-justify font-light text-gray-300'
             >
-              <span>
-                {personalDetails.description}
-
-                {/* <FontAwesomeIcon
-                  className='ml-1 inline h-5 w-5'
-                  icon={faWandMagicSparkles}
-                />
-                <FontAwesomeIcon
-                  className='ml-1 inline h-5 w-5'
-                  icon={faLaptop}
-                /> */}
-              </span>
+              <span>{personalDetails.description}</span>
             </div>
             <div className='font-vt323 rounded-lg border px-4 py-2 backdrop-blur-md dark:bg-[color:rgba(33,33,33,0.3)]'>
-              <p className='text-responsive-4 mb-1 '>
-                Technologies I've worked with:
-              </p>
+              <p className='text-responsive-4 mb-1 '>My Tech Stack:</p>
               <ul className='text-responsive-3.5 grid auto-cols-auto grid-flow-col grid-rows-3 gap-1'>
                 {techStack.map(({ id, label, icon: Icon }) => (
                   <li key={id} className='flex items-center gap-2'>
