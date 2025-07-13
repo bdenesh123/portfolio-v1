@@ -58,11 +58,12 @@ export const personalDetails = {
       company: 'World Vest Base | Global Financial Intelligence',
       title: 'Frontend Engineer',
       description: [
-        'Built real-time dashboards and dynamic platform pages.',
-        'Created interactive financial data tables and custom charts.',
-        'Enhanced dark mode UI and integrated REST APIs.',
-        'Implemented page-specific error handling and fallback UIs.',
-        'Collaborated cross-functionally to ship user-focused features.',
+        'Developed real-time dashboards and platform pages for financial data.',
+        'Built interactive data tables with year filters and embedded chart dialogs.',
+        'Implemented a dynamic maintenance page for both global and page-specific downtime.',
+        'Enhanced dark mode styling for visual consistency across the platform.',
+        'Integrated REST APIs and improved frontend performance via bug fixes and optimizations.',
+        'Used GitLab and collaborated closely with backend developers and product managers.',
       ],
       // description: [
       //   'Developed ',
@@ -94,8 +95,7 @@ export const personalDetails = {
       title: 'Research Officer',
       description: [
         'Designed and simulated soft grippers using shape memory polymers.',
-        'Led 4D printing and prototyping processes.',
-        'Collaborated with research team on PETRONAS Future Positioning Project.',
+        'Led 4D printing and CAD workflows for soft robotics under the PETRONAS Future Positioning Project.',
       ],
       techStack: [
         { id: 'simulation', label: 'Finite Element Analysis' },
@@ -111,8 +111,7 @@ export const personalDetails = {
       title: 'Internship',
       description: [
         'Supported mechanical/electrical system maintenance.',
-        'Monitored project progress and assisted quality control.',
-        'Maintained technical documentation and records.',
+        'Monitored quality controls and ensured compliance with regulatory standards.',
       ],
       techStack: [
         { id: 'qa', label: 'Quality Assurance' },
