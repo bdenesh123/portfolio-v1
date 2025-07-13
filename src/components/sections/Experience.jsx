@@ -46,13 +46,18 @@ const Experience = () => {
                   <div className='relative my-1.5'>
                     {/* Pulsing background effect */}
                     {isCurrent && (
-                      <div className='absolute -left-0.5 -top-0.5 h-5 w-5 animate-ping rounded-full bg-cyan-400 opacity-30' />
+                      <div
+                        className='absolute -left-0.5 -top-0.5 h-5 w-5 animate-ping rounded-full opacity-30'
+                        style={{ backgroundColor: '#f56565' }}
+                      />
                     )}
+
                     {/* Core dot */}
                     <div
-                      className={`${
-                        isCurrent ? 'bg-cyan-300' : 'bg-zinc-200'
-                      } relative h-3.5 w-3.5 rounded-full bg-cyan-300`}
+                      className={`relative h-3.5 w-3.5 rounded-full`}
+                      style={{
+                        backgroundColor: isCurrent ? '#f56565' : '#e4e4e7',
+                      }} // fallback for bg-zinc-200
                     />
                   </div>
                   <div className='h-full w-0.5 bg-gray-600' />
