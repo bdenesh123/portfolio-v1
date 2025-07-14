@@ -138,7 +138,7 @@ const Threads = ({
 
   const threadColor = useMemo(() => {
     // return theme === 'light' ? [0.64, 0.64, 0.64] : [0.96, 0.4, 0.4];
-    return theme === 'light' ? [0.37, 0.37, 0.37] : [0.91, 0.91, 0.91];
+    return theme === 'light' ? [0.64, 0.64, 0.64] : [0.91, 0.91, 0.91];
   }, [theme]);
 
   useEffect(() => {
