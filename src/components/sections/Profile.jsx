@@ -14,7 +14,7 @@ import { transitions } from '@/utils/transitions';
 import BottomFadeOverlay from '../common/BottomFadeOverlay';
 import HoverButton from '../common/HoverButton';
 import { Separator } from '../ui';
-import Dither from '../ui/Dither';
+import Threads from '../ui/Threads';
 
 const Profile = () => {
   return (
@@ -32,19 +32,15 @@ const Profile = () => {
             ease: 'easeInOut',
           }}
         >
-          <Dither
-            // className="h-48"
-            waveColor={[0.5, 0.5, 0.5]}
-            disableAnimation={false}
-            enableMouseInteraction={true}
-            mouseRadius={0.3}
-            colorNum={4}
-            waveAmplitude={0.3}
-            waveFrequency={3}
-            waveSpeed={0.05}
-          />
+          <div>
+            <Threads
+              amplitude={2.5}
+              distance={0.2}
+              enableMouseInteraction={true}
+            />
+          </div>
 
-          <BottomFadeOverlay />
+          {/* <BottomFadeOverlay /> */}
         </motion.div>
 
         <motion.div
