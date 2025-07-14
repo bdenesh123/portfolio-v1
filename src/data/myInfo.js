@@ -60,7 +60,7 @@ export const personalDetails = {
       description: [
         'Developed real-time dashboards and platform pages for financial data.',
         'Built interactive data tables with year filters and embedded chart dialogs.',
-        'Implemented a dynamic maintenance page for both global and page-specific downtime.',
+        'Implemented a dynamic maintenance page for both global and page specific downtime.',
         'Enhanced dark mode styling for visual consistency across the platform.',
         'Integrated REST APIs and improved frontend performance via bug fixes and optimizations.',
         'Used GitLab and collaborated closely with backend developers and product managers.',

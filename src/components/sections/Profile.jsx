@@ -81,7 +81,7 @@ const Profile = () => {
                     className='mx-1 hidden h-8 bg-gray-700 dark:bg-gray-300 sm:block'
                   />
 
-                  <span className='font-vt323 text-[1.5rem] font-medium sm:text-[1.6rem]'>
+                  <span className='font-vt323 text-[1.7rem] font-medium sm:text-[1.7rem]'>
                     {personalDetails.position}
                   </span>
                 </div>
