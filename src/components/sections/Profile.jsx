@@ -1,7 +1,3 @@
-import {
-  faLaptop,
-  faWandMagicSparkles,
-} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Mail, MapPin, Phone, Smartphone } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -13,13 +9,10 @@ import { transitions } from '@/utils/transitions';
 
 import BottomFadeOverlay from '../common/BottomFadeOverlay';
 import HoverButton from '../common/HoverButton';
-import { useTheme } from '../ThemeProvider';
 import { Separator } from '../ui';
 import Threads from '../ui/Threads';
 
 const Profile = () => {
-  const theme = useTheme;
-
   return (
     <section id='profile' className='scroll-mt-nav'>
       <div id='profile-wrapper' className='relative'>
@@ -37,7 +30,6 @@ const Profile = () => {
         >
           <div>
             <Threads
-              color={theme === 'light' ? [0.91, 0.91, 0.91] : [1, 1, 1]}
               amplitude={2.5}
               distance={0.2}
               enableMouseInteraction={true}
