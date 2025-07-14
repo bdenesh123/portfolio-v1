@@ -1,5 +1,7 @@
 import { Color, Mesh, Program, Renderer, Triangle } from 'ogl';
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
+
+import { useTheme } from '../ThemeProvider';
 
 const vertexShader = `
 attribute vec2 position;
@@ -125,14 +127,18 @@ void main() {
 `;
 
 const Threads = ({
-  color = [0.91, 0.91, 0.91],
   amplitude = 1,
   distance = 0,
   enableMouseInteraction = false,
   ...rest
 }) => {
+  const { theme } = useTheme();
   const containerRef = useRef(null);
   const animationFrameId = useRef();
+
+  const threadColor = useMemo(() => {
+    return theme === 'light' ? [0.55, 0.55, 0.55] : [0.91, 0.91, 0.91];
+  }, [theme]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -158,7 +164,7 @@ const Threads = ({
             gl.canvas.width / gl.canvas.height,
           ),
         },
-        uColor: { value: new Color(...color) },
+        uColor: { value: new Color(...threadColor) },
         uAmplitude: { value: amplitude },
         uDistance: { value: distance },
         uMouse: { value: new Float32Array([0.5, 0.5]) },
@@ -205,8 +211,8 @@ const Threads = ({
         program.uniforms.uMouse.value[0] = 0.5;
         program.uniforms.uMouse.value[1] = 0.5;
       }
-      program.uniforms.iTime.value = t * 0.001;
 
+      program.uniforms.iTime.value = t * 0.001;
       renderer.render({ scene: mesh });
       animationFrameId.current = requestAnimationFrame(update);
     }
@@ -216,7 +222,6 @@ const Threads = ({
       if (animationFrameId.current)
         cancelAnimationFrame(animationFrameId.current);
       window.removeEventListener('resize', resize);
-
       if (enableMouseInteraction) {
         container.removeEventListener('mousemove', handleMouseMove);
         container.removeEventListener('mouseleave', handleMouseLeave);
@@ -224,7 +229,7 @@ const Threads = ({
       if (container.contains(gl.canvas)) container.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
-  }, [color, amplitude, distance, enableMouseInteraction]);
+  }, [threadColor, amplitude, distance, enableMouseInteraction]);
 
   return (
     <div ref={containerRef} className='relative h-[10%] w-full' {...rest} />
