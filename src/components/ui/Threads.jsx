@@ -137,7 +137,7 @@ const Threads = ({
   const animationFrameId = useRef();
 
   const threadColor = useMemo(() => {
-    return theme === 'light' ? [0.55, 0.55, 0.55] : [0.91, 0.91, 0.91];
+    return theme === 'light' ? [0.64, 0.64, 0.64] : [0.91, 0.91, 0.91];
   }, [theme]);
 
   useEffect(() => {
