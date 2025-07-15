@@ -1,6 +1,6 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import dayjs from 'dayjs';
-import { BriefcaseBusiness, Folders, User } from 'lucide-react';
+import { BriefcaseBusiness, Database, Folders, User } from 'lucide-react';
 
 import FontAwesomeIcon from '@/assets/icons/FontAwesomeIcon';
 import GitlabIcon from '@/assets/icons/Gitlab';
@@ -36,8 +36,8 @@ export const techStack = [
   // { id: 'redux', label: 'Redux', icon: ReduxIcon },
   // { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
   { id: 'vite', label: 'Vite', icon: ViteJsIcon },
-  { id: 'vercel', label: 'Vercel', icon: VercelIcon },
-  // { id: 'mysql', label: 'SQL', icon: Database },
+  // { id: 'vercel', label: 'Vercel', icon: VercelIcon },
+  { id: 'mysql', label: 'SQL', icon: Database },
 ];
 // Personal
 export const personalDetails = {
