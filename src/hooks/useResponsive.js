@@ -1,37 +1,38 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const useResponsive = () => {
   const debounceTime = 250;
-
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== 'undefined' ? window.innerWidth : 0,
   );
 
+  const timeoutRef = useRef(null);
+
   const handleResize = useCallback(() => {
-    let timeoutId;
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
 
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-
-      timeoutId = setTimeout(() => {
-        setWindowWidth(window.innerWidth);
-      }, debounceTime);
-    };
+    timeoutRef.current = setTimeout(() => {
+      setWindowWidth(window.innerWidth);
+    }, debounceTime);
   }, [debounceTime]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    // Set initial width
     setWindowWidth(window.innerWidth);
 
-    const debouncedHandler = handleResize();
+    // Attach debounced resize listener
+    window.addEventListener('resize', handleResize);
 
-    window.addEventListener('resize', debouncedHandler);
-
+    // Cleanup on unmount
     return () => {
-      window.removeEventListener('resize', debouncedHandler);
+      window.removeEventListener('resize', handleResize);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
     };
   }, [handleResize]);
 
