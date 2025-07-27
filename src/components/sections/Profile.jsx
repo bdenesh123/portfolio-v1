@@ -56,24 +56,24 @@ const Profile = () => {
               <img
                 src={profilePic}
                 alt='Profile Picture'
-                className='h-[110px] w-[100px]  rounded-3xl object-cover'
+                className='h-[130px] w-[120px]  rounded-3xl object-cover'
               />
               <div className='flex w-full flex-col items-center gap-2 self-center p-2 md:items-start'>
                 {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
-                <div className='flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:justify-start sm:gap-1'>
-                  <span className='font-press-start-2p text-[1.4rem] font-extrabold'>
+                <div className='flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-[0.3rem]'>
+                  <span className='font-press-start-2p text-center text-[1.4rem] font-extrabold sm:text-left'>
                     {personalDetails.name}
                   </span>
 
                   {/* Separator only visible on sm and above */}
                   <Separator
                     orientation='vertical'
-                    className='mx-1 hidden h-8 bg-gray-700 dark:bg-gray-300 sm:block'
+                    className='mx-[0.3rem] hidden h-8 bg-gray-700 dark:bg-gray-300 sm:block'
                   />
 
-                  <span className='font-vt323 text-[1.7rem] font-medium sm:text-[1.7rem]'>
+                  <span className='font-vt323 whitespace-nowrap text-[1.7rem] font-medium sm:text-[1.9rem]'>
                     {personalDetails.position}
                   </span>
                 </div>

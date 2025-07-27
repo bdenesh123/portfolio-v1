@@ -41,7 +41,7 @@ export const techStack = [
 ];
 // Personal
 export const personalDetails = {
-  name: 'Deneshwaran',
+  name: 'Deneshwaran Balarajan',
   initials: 'DN',
   position: 'Frontend Engineer',
   location: 'Cheras, Kuala Lumpur, Malaysia',
