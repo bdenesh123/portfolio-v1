@@ -142,7 +142,7 @@ export const getProjectDetails = (isDarkMode) => [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },
       { id: 'motion', label: 'Motion' },
-      { id: 'tailwind', label: 'Tailwind' },
+      // { id: 'tailwind', label: 'Tailwind' },
     ],
   },
   {
@@ -157,9 +157,10 @@ export const getProjectDetails = (isDarkMode) => [
     techStack: [
       { id: 'react', label: 'React' },
       { id: 'javascript', label: 'JavaScript' },
-      { id: 'tailwind', label: 'Tailwind' },
+      // { id: 'tailwind', label: 'Tailwind' },
+      { id: 'router', label: 'Router' },
       { id: 'redux', label: 'Redux' },
-      { id: 'axios', label: 'Axios' },
+      { id: 'jwt', label: 'JWT' },
     ],
   },
 ];
