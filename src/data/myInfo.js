@@ -1,15 +1,9 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import dayjs from 'dayjs';
-import {
-  Briefcase,
-  BriefcaseBusiness,
-  Database,
-  Folders,
-  User,
-} from 'lucide-react';
+import { Briefcase, Database, Folders, User } from 'lucide-react';
 
 import FontAwesomeIcon from '@/assets/icons/FontAwesomeIcon';
 import GitlabIcon from '@/assets/icons/Gitlab';
+import GsapIcon from '@/assets/icons/GsapIcon';
 import JavascriptIcon from '@/assets/icons/JavascriptIcon';
 import MaterialUiIcon from '@/assets/icons/MaterialUiIcon';
 import MotionJsIcon from '@/assets/icons/MotionIcon';
@@ -17,17 +11,18 @@ import PythonIcon from '@/assets/icons/PythonIcon';
 import ReactIcon from '@/assets/icons/ReactIcon';
 import ShadcnUiIcon from '@/assets/icons/ShadcnUiIcon';
 import TailwindCssIcon from '@/assets/icons/TailwindIcon';
+import ThreeJsIcon from '@/assets/icons/Threejs';
 import VercelIcon from '@/assets/icons/VercelIcon';
 import ViteJsIcon from '@/assets/icons/VIteJsIcon';
 import airbnbDark from '@/assets/images/airbnbDark.jpg';
 import airbnbLight from '@/assets/images/airbnbLight.jpg';
+import iphoneDark from '@/assets/images/iphoneDark.jpg';
+import iphoneLight from '@/assets/images/iphoneLight.jpg';
 import portfolioDark from '@/assets/images/portfoliov1Dark.jpg';
 import portfolioLight from '@/assets/images/portfoliov1Light.jpg';
 import toyotiresLogo from '@/assets/images/toyotires.png';
 import utpLogo from '@/assets/images/utp.png';
 import wvbLogo from '@/assets/images/wvb1.png';
-
-const currentUrl = window.location.href;
 
 // Tech Stack
 export const techStack = [
@@ -37,11 +32,13 @@ export const techStack = [
   { id: 'motion', label: 'Motion', icon: MotionJsIcon },
   { id: 'tailwind', label: 'Tailwind', icon: TailwindCssIcon },
   { id: 'mui', label: 'MUI', icon: MaterialUiIcon },
-  { id: 'shadcn', label: 'Shadcn UI', icon: ShadcnUiIcon },
+  { id: 'gsap', label: 'GSAP', icon: GsapIcon },
+  { id: 'threejs', label: 'Three.js', icon: ThreeJsIcon },
+  // { id: 'shadcn', label: 'Shadcn UI', icon: ShadcnUiIcon },
   // { id: 'fontawesome', label: 'Font Awesome', icon: FontAwesomeIcon },
   // { id: 'redux', label: 'Redux', icon: ReduxIcon },
   // { id: 'gitlab', label: 'GitLab', icon: GitlabIcon },
-  { id: 'vite', label: 'Vite', icon: ViteJsIcon },
+  // { id: 'vite', label: 'Vite', icon: ViteJsIcon },
   // { id: 'vercel', label: 'Vercel', icon: VercelIcon },
   { id: 'mysql', label: 'SQL', icon: Database },
 ];
@@ -161,6 +158,23 @@ export const getProjectDetails = (isDarkMode) => [
       { id: 'router', label: 'Router' },
       { id: 'redux', label: 'Redux' },
       { id: 'jwt', label: 'JWT' },
+    ],
+  },
+  {
+    id: 'iphone15pro',
+    name: 'iPhone 15 Pro Clone',
+    repoUrl: 'https://github.com/bdenesh123/iPhone-15Pro',
+    url: 'https://react-iphone-15-pro.vercel.app/',
+    image: isDarkMode ? iphoneDark : iphoneLight,
+    description:
+      'Recreated Apple’s iPhone 15 Pro product page using React, Tailwind CSS, Three.js, and GSAP to demonstrate advanced 3D web development and animation skills.',
+
+    techStack: [
+      { id: 'react', label: 'React' },
+      { id: 'javascript', label: 'JavaScript' },
+      { id: 'gsap', label: 'GSAP' },
+      { id: 'threejs', label: 'Three.js' },
+      { id: '3d', label: 'Web3D' },
     ],
   },
 ];

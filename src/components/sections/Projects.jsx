@@ -87,7 +87,7 @@ const ProjectTab = (props) => {
               <span key={stack.id}>{stack.label}</span>
             ))}
           </div>
-          <div className='flex justify-end gap-2'>
+          <div className='flex justify-end gap-2 pt-2'>
             <HoverButton onClick={() => handleRedirect('github')}>
               <div className='text-responsive-4 flex items-center justify-between gap-2'>
                 Source <FontAwesomeIcon icon={faGithub} className='h-4 w-4' />
