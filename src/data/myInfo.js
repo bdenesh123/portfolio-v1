@@ -162,7 +162,7 @@ export const getProjectDetails = (isDarkMode) => [
   },
   {
     id: 'iphone15pro',
-    name: 'iPhone 15 Pro Inspired Website',
+    name: 'iPhone 15 Pro Product Page Rebuild',
     repoUrl: 'https://github.com/bdenesh123/iPhone-15Pro',
     url: 'https://react-iphone-15-pro.vercel.app/',
     image: isDarkMode ? iphoneDark : iphoneLight,
