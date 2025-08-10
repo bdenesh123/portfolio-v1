@@ -174,7 +174,7 @@ export const getProjectDetails = (isDarkMode) => [
       { id: 'javascript', label: 'JavaScript' },
       { id: 'gsap', label: 'GSAP' },
       { id: 'threejs', label: 'Three.js' },
-      { id: '3d', label: 'Web3D' },
+      { id: '3d', label: '3D Design' },
     ],
   },
 ];
